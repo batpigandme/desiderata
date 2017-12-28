@@ -13,3 +13,33 @@ ggplot2_issues2 <- gh("/repos/:owner/:repo/issues", owner = "tidyverse", repo = 
 issue_titles2 <- vapply(ggplot2_issues2, "[[", "", "title")
 
 library(jsonlite)
+
+# --------------------------- SECOND WAY
+library(tidyverse)
+library(httr)
+library(github)
+
+source(file = here::here("R", "app_auth.R"))
+
+# create github context
+ctx <- create.github.context()
+
+# get organization repos
+tidyverse_org_repos <- get.organization.repositories(org = "tidyverse", ctx = ctx)
+
+## get list of repos from response list
+tverse_repo_content <- tidyverse_org_repos[["content"]]
+
+length(tverse_repo_content)
+seq_along(tverse_repo_content)
+
+## get all repo names
+repo_names <- vector("character", length(tverse_repo_content))
+  for (i in seq_along(tverse_repo_content)) {
+    repo_names[[i]] <- tverse_repo_content[[i]][["name"]]
+  }
+
+repo_urls <- vector("character", length(tverse_repo_content))
+for (i in seq_along(tverse_repo_content)) {
+  repo_urls[[i]] <- tverse_repo_content[[i]][["url"]]
+}
