@@ -17,7 +17,14 @@ library(jsonlite)
 # --------------------------- SECOND WAY
 library(tidyverse)
 library(httr)
+library(jsonlite)
 library(github)
+
+json_parse <- function(req) {
+  text <- content(req, "text", encoding = "UTF-8")
+  if (identical(text, "")) warning("No output to parse.")
+  fromJSON(text)
+}
 
 source(file = here::here("R", "app_auth.R"))
 
@@ -43,3 +50,9 @@ repo_urls <- vector("character", length(tverse_repo_content))
 for (i in seq_along(tverse_repo_content)) {
   repo_urls[[i]] <- tverse_repo_content[[i]][["url"]]
 }
+
+reqdf <- json_parse(req)
+# get list of issues for dplyr
+dplyr_issues <- get.repository.issues(owner = "tidyverse", repo = "dplyr", ctx = ctx)$content
+
+readr_issues <- get.repository.issues(owner = "tidyverse", repo = "readr", ctx = ctx)
