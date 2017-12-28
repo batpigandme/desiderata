@@ -51,7 +51,21 @@ for (i in seq_along(tverse_repo_content)) {
   repo_urls[[i]] <- tverse_repo_content[[i]][["url"]]
 }
 
-reqdf <- json_parse(req)
+# get organization issues
+tidyverse_issues <- get.organization.issues("tidyverse", ctx = ctx)
+
+
+
+# use jsonlite to parse json into df
+repo_issues <- json_parse(req)
+
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+
+gtoken <- config(token = github_token)
+req <- GET("https://api.github.com/repos/tidyverse/dplyr/issues", gtoken)
+
+
+
 # get list of issues for dplyr
 dplyr_issues <- get.repository.issues(owner = "tidyverse", repo = "dplyr", ctx = ctx)$content
 
