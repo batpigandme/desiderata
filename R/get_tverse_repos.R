@@ -6,6 +6,17 @@ tverse_repos <- gh("/orgs/:org/repos", org = "tidyverse")
 vapply(tverse_repos, "[[", "", "name")
 repo_names <- vapply(tverse_repos, "[[", "", "name")
 
+dplyr_issues <- gh("/repos/:owner/:repo/issues", owner = "tidyverse", repo = "dplyr")
+dplyr_issues_next <- gh_next(dplyr_issues)
+
+
+dplyr_issue_combo <- append(dplyr_issues, dplyr_issues_next)
+
+gh:::gh_has_next(dplyr_issues_next)
+
+dplyr_issues_next <- gh_next(dplyr_issues_next)
+dplyr_issues_combo <- append(dplyr_issue_combo, dplyr_issues_next)
+
 ggplot2_issues <- gh("/repos/:owner/:repo/issues", owner = "tidyverse", repo = "ggplot2")
 issue_titles <- vapply(ggplot2_issues, "[[", "", "title")
 
@@ -49,6 +60,11 @@ repo_names <- vector("character", length(tverse_repo_content))
 repo_urls <- vector("character", length(tverse_repo_content))
 for (i in seq_along(tverse_repo_content)) {
   repo_urls[[i]] <- tverse_repo_content[[i]][["url"]]
+}
+
+issue_status <- vector("character", length(dplyr_issue_combo))
+for (i in seq_along(dplyr_issue_combo)) {
+  issue_status[[i]] <- dplyr_issue_combo[[i]][["state"]]
 }
 
 # get organization issues
