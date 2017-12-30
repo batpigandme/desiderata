@@ -10,12 +10,14 @@ dplyr_issues <- gh("/repos/:owner/:repo/issues", owner = "tidyverse", repo = "dp
 dplyr_issues_next <- gh_next(dplyr_issues)
 
 
-dplyr_issue_combo <- append(dplyr_issues, dplyr_issues_next)
+dplyr_issues_combo <- append(dplyr_issues, dplyr_issues_next)
+
+
 
 gh:::gh_has_next(dplyr_issues_next)
 
 dplyr_issues_next <- gh_next(dplyr_issues_next)
-dplyr_issues_combo <- append(dplyr_issue_combo, dplyr_issues_next)
+dplyr_issues_combo <- append(dplyr_issues_combo, dplyr_issues_next)
 
 ggplot2_issues <- gh("/repos/:owner/:repo/issues", owner = "tidyverse", repo = "ggplot2")
 issue_titles <- vapply(ggplot2_issues, "[[", "", "title")
@@ -74,13 +76,19 @@ tidyverse_issues <- get.organization.issues("tidyverse", ctx = ctx)
 
 # use jsonlite to parse json into df
 repo_issues <- json_parse(req)
+parsed_content <- content(req, "parsed")
+
+parsed_content
 
 github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
 
 gtoken <- config(token = github_token)
 req <- GET("https://api.github.com/repos/tidyverse/dplyr/issues", gtoken)
 
+issues <- GET("https://api.github.com/repos/tidyverse/dplyr/issues") %>% stop_for_status()
+json_issues <- json_parse(issues)
 
+issues$`next`
 
 # get list of issues for dplyr
 dplyr_issues <- get.repository.issues(owner = "tidyverse", repo = "dplyr", ctx = ctx)$content
