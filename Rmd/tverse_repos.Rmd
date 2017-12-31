@@ -1,0 +1,47 @@
+---
+title: "Tidyverse Repos"
+author: "Mara Averick"
+output:
+  html_document:
+    keep_md: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Locked and loaded.[^1]
+
+```{r}
+suppressPackageStartupMessages(library(tidyverse))
+library(gh)
+```
+
+Where `repo` = repository name, `purrr::map()` to extract the elements `name` from list of repositories. `issue` = list column of issues for each repository (vectorize `gh()` using `~` formula syntax).
+
+```{r}
+repos <- gh("/orgs/tidyverse/repos", .limit = Inf)
+```
+
+```{r}
+iss_df <-
+  data_frame(
+    repo = repos %>% map_chr("name"),
+    issue = repo %>%
+      map(~ gh(repo = .x, endpoint = "/repos/tidyverse/:repo/issues",
+               .limit = Inf))
+    )
+str(iss_df, max.level = 1)
+```
+
+```{r}
+iss_df %>%
+  mutate(n_open = issue %>% map_int(length)) %>%
+  select(-issue) %>%
+  filter(n_open > 0) %>%
+  arrange(desc(n_open)) %>%
+  print(n = nrow(.))
+```
+
+
+[^1]: A total rip-off of Jenny Bryan's ["Analyze GitHub stuff with R"](https://github.com/jennybc/analyze-github-stuff-with-r)
