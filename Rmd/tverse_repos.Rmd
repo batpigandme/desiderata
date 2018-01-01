@@ -29,9 +29,13 @@ iss_df <-
     repo = repos %>% map_chr("name"),
     issue = repo %>%
       map(~ gh(repo = .x, endpoint = "/repos/tidyverse/:repo/issues",
-               .limit = Inf))
+               .limit = Inf)),
+    reprex_issues = repo %>%
+      map(~ gh(repo = .x, endpoint = "/repos/tidyverse/:repo/issues", labels = "reprex", .limit = Inf))
     )
 str(iss_df, max.level = 1)
+rep_iss <- flatten(iss_df$reprex_issues)
+keeps <- tibble(reprex_issue = keep(rep_iss,is.list))
 ```
 
 ```{r}
@@ -41,6 +45,13 @@ iss_df %>%
   filter(n_open > 0) %>%
   arrange(desc(n_open)) %>%
   print(n = nrow(.))
+```
+
+```{r}
+# gh(endpoint = "/repos/tidyverse/ggplot2/issues/1904/labels")
+gh(endpoint = "https://api.github.com/repos/tidyverse/ggplot2/issues/2383/labels")
+flat_iss <- flatten(iss_df$issue)
+flat_frame <- tibble::enframe(flat_iss)
 ```
 
 

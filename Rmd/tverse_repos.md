@@ -30,15 +30,23 @@ iss_df <-
     repo = repos %>% map_chr("name"),
     issue = repo %>%
       map(~ gh(repo = .x, endpoint = "/repos/tidyverse/:repo/issues",
-               .limit = Inf))
+               .limit = Inf)),
+    reprex_issues = repo %>%
+      map(~ gh(repo = .x, endpoint = "/repos/tidyverse/:repo/issues", labels = "reprex", .limit = Inf))
     )
 str(iss_df, max.level = 1)
 ```
 
 ```
-## Classes 'tbl_df', 'tbl' and 'data.frame':	28 obs. of  2 variables:
-##  $ repo : chr  "ggplot2" "lubridate" "stringr" "dplyr" ...
-##  $ issue:List of 28
+## Classes 'tbl_df', 'tbl' and 'data.frame':	28 obs. of  3 variables:
+##  $ repo         : chr  "ggplot2" "lubridate" "stringr" "dplyr" ...
+##  $ issue        :List of 28
+##  $ reprex_issues:List of 28
+```
+
+```r
+rep_iss <- flatten(iss_df$reprex_issues)
+keeps <- tibble(reprex_issue = keep(rep_iss,is.list))
 ```
 
 
@@ -52,37 +60,52 @@ iss_df %>%
 ```
 
 ```
-## # A tibble: 28 x 2
-##    repo          n_open
-##    <chr>          <int>
-##  1 dplyr            143
-##  2 broom            130
-##  3 rlang             75
-##  4 purrr             74
-##  5 readr             61
-##  6 ggplot2           53
-##  7 magrittr          48
-##  8 tibble            48
-##  9 haven             37
-## 10 readxl            32
-## 11 modelr            30
-## 12 forcats           27
-## 13 lubridate         25
-## 14 googledrive       20
-## 15 tidyr             18
-## 16 reprex            17
-## 17 style             13
-## 18 tidyverse.org     13
-## 19 tidyverse         12
-## 20 stringr           10
-## 21 hms                8
-## 22 glue               3
-## 23 googlesheets4      2
-## 24 tidytemplate       1
-## 25 blob               1
-## 26 ggplot2-docs       1
-## 27 dbplyr             1
-## 28 tidyselect         1
+## # A tibble: 28 x 3
+##    repo          reprex_issues     n_open
+##    <chr>         <list>             <int>
+##  1 dplyr         <S3: gh_response>    143
+##  2 broom         <S3: gh_response>    130
+##  3 rlang         <S3: gh_response>     75
+##  4 purrr         <S3: gh_response>     74
+##  5 readr         <S3: gh_response>     61
+##  6 ggplot2       <S3: gh_response>     53
+##  7 magrittr      <S3: gh_response>     48
+##  8 tibble        <S3: gh_response>     48
+##  9 haven         <S3: gh_response>     37
+## 10 readxl        <S3: gh_response>     32
+## 11 modelr        <S3: gh_response>     30
+## 12 forcats       <S3: gh_response>     27
+## 13 lubridate     <S3: gh_response>     25
+## 14 googledrive   <S3: gh_response>     20
+## 15 tidyr         <S3: gh_response>     18
+## 16 reprex        <S3: gh_response>     17
+## 17 style         <S3: gh_response>     13
+## 18 tidyverse.org <S3: gh_response>     13
+## 19 tidyverse     <S3: gh_response>     12
+## 20 stringr       <S3: gh_response>     10
+## 21 hms           <S3: gh_response>      8
+## 22 glue          <S3: gh_response>      3
+## 23 googlesheets4 <S3: gh_response>      2
+## 24 tidytemplate  <S3: gh_response>      1
+## 25 blob          <S3: gh_response>      1
+## 26 ggplot2-docs  <S3: gh_response>      1
+## 27 dbplyr        <S3: gh_response>      1
+## 28 tidyselect    <S3: gh_response>      1
+```
+
+
+```r
+# gh(endpoint = "/repos/tidyverse/ggplot2/issues/1904/labels")
+gh(endpoint = "https://api.github.com/repos/tidyverse/ggplot2/issues/2383/labels")
+```
+
+```
+## ""
+```
+
+```r
+flat_iss <- flatten(iss_df$issue)
+flat_frame <- tibble::enframe(flat_iss)
 ```
 
 

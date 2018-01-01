@@ -319,49 +319,59 @@ library(gh)</code></pre>
     repo = repos %&gt;% map_chr(&quot;name&quot;),
     issue = repo %&gt;%
       map(~ gh(repo = .x, endpoint = &quot;/repos/tidyverse/:repo/issues&quot;,
-               .limit = Inf))
+               .limit = Inf)),
+    reprex_issues = repo %&gt;%
+      map(~ gh(repo = .x, endpoint = &quot;/repos/tidyverse/:repo/issues&quot;, labels = &quot;reprex&quot;, .limit = Inf))
     )
 str(iss_df, max.level = 1)</code></pre>
-<pre><code>## Classes 'tbl_df', 'tbl' and 'data.frame':    28 obs. of  2 variables:
-##  $ repo : chr  &quot;ggplot2&quot; &quot;lubridate&quot; &quot;stringr&quot; &quot;dplyr&quot; ...
-##  $ issue:List of 28</code></pre>
+<pre><code>## Classes 'tbl_df', 'tbl' and 'data.frame':    28 obs. of  3 variables:
+##  $ repo         : chr  &quot;ggplot2&quot; &quot;lubridate&quot; &quot;stringr&quot; &quot;dplyr&quot; ...
+##  $ issue        :List of 28
+##  $ reprex_issues:List of 28</code></pre>
+<pre class="r"><code>rep_iss &lt;- flatten(iss_df$reprex_issues)
+keeps &lt;- tibble(reprex_issue = keep(rep_iss,is.list))</code></pre>
 <pre class="r"><code>iss_df %&gt;%
   mutate(n_open = issue %&gt;% map_int(length)) %&gt;%
   select(-issue) %&gt;%
   filter(n_open &gt; 0) %&gt;%
   arrange(desc(n_open)) %&gt;%
   print(n = nrow(.))</code></pre>
-<pre><code>## # A tibble: 28 x 2
-##    repo          n_open
-##    &lt;chr&gt;          &lt;int&gt;
-##  1 dplyr            143
-##  2 broom            130
-##  3 rlang             75
-##  4 purrr             74
-##  5 readr             61
-##  6 ggplot2           53
-##  7 magrittr          48
-##  8 tibble            48
-##  9 haven             37
-## 10 readxl            32
-## 11 modelr            30
-## 12 forcats           27
-## 13 lubridate         25
-## 14 googledrive       20
-## 15 tidyr             18
-## 16 reprex            17
-## 17 style             13
-## 18 tidyverse.org     13
-## 19 tidyverse         12
-## 20 stringr           10
-## 21 hms                8
-## 22 glue               3
-## 23 googlesheets4      2
-## 24 tidytemplate       1
-## 25 blob               1
-## 26 ggplot2-docs       1
-## 27 dbplyr             1
-## 28 tidyselect         1</code></pre>
+<pre><code>## # A tibble: 28 x 3
+##    repo          reprex_issues     n_open
+##    &lt;chr&gt;         &lt;list&gt;             &lt;int&gt;
+##  1 dplyr         &lt;S3: gh_response&gt;    143
+##  2 broom         &lt;S3: gh_response&gt;    130
+##  3 rlang         &lt;S3: gh_response&gt;     75
+##  4 purrr         &lt;S3: gh_response&gt;     74
+##  5 readr         &lt;S3: gh_response&gt;     61
+##  6 ggplot2       &lt;S3: gh_response&gt;     53
+##  7 magrittr      &lt;S3: gh_response&gt;     48
+##  8 tibble        &lt;S3: gh_response&gt;     48
+##  9 haven         &lt;S3: gh_response&gt;     37
+## 10 readxl        &lt;S3: gh_response&gt;     32
+## 11 modelr        &lt;S3: gh_response&gt;     30
+## 12 forcats       &lt;S3: gh_response&gt;     27
+## 13 lubridate     &lt;S3: gh_response&gt;     25
+## 14 googledrive   &lt;S3: gh_response&gt;     20
+## 15 tidyr         &lt;S3: gh_response&gt;     18
+## 16 reprex        &lt;S3: gh_response&gt;     17
+## 17 style         &lt;S3: gh_response&gt;     13
+## 18 tidyverse.org &lt;S3: gh_response&gt;     13
+## 19 tidyverse     &lt;S3: gh_response&gt;     12
+## 20 stringr       &lt;S3: gh_response&gt;     10
+## 21 hms           &lt;S3: gh_response&gt;      8
+## 22 glue          &lt;S3: gh_response&gt;      3
+## 23 googlesheets4 &lt;S3: gh_response&gt;      2
+## 24 tidytemplate  &lt;S3: gh_response&gt;      1
+## 25 blob          &lt;S3: gh_response&gt;      1
+## 26 ggplot2-docs  &lt;S3: gh_response&gt;      1
+## 27 dbplyr        &lt;S3: gh_response&gt;      1
+## 28 tidyselect    &lt;S3: gh_response&gt;      1</code></pre>
+<pre class="r"><code># gh(endpoint = &quot;/repos/tidyverse/ggplot2/issues/1904/labels&quot;)
+gh(endpoint = &quot;https://api.github.com/repos/tidyverse/ggplot2/issues/2383/labels&quot;)</code></pre>
+<pre><code>## &quot;&quot;</code></pre>
+<pre class="r"><code>flat_iss &lt;- flatten(iss_df$issue)
+flat_frame &lt;- tibble::enframe(flat_iss)</code></pre>
 <section class="footnotes">
 <hr />
 <ol>
