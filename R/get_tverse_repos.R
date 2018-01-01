@@ -6,6 +6,11 @@ tverse_repos <- gh("/orgs/:org/repos", org = "tidyverse")
 vapply(tverse_repos, "[[", "", "name")
 repo_names <- vapply(tverse_repos, "[[", "", "name")
 
+
+
+tverse_repos[[1]][c("full_name", "html_url", "description", "open_issues_count")]
+
+
 dplyr_issues <- gh("/repos/:owner/:repo/issues", owner = "tidyverse", repo = "dplyr")
 dplyr_issues_next <- gh_next(dplyr_issues)
 
@@ -88,7 +93,6 @@ req <- GET("https://api.github.com/repos/tidyverse/dplyr/issues", gtoken)
 issues <- GET("https://api.github.com/repos/tidyverse/dplyr/issues") %>% stop_for_status()
 json_issues <- json_parse(issues)
 
-issues$`next`
 
 # get list of issues for dplyr
 dplyr_issues <- get.repository.issues(owner = "tidyverse", repo = "dplyr", ctx = ctx)$content

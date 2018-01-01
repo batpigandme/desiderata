@@ -58,9 +58,9 @@ iss_df %>%
 ##  1 dplyr            143
 ##  2 broom            130
 ##  3 rlang             75
-##  4 purrr             73
-##  5 readr             60
-##  6 ggplot2           54
+##  4 purrr             74
+##  5 readr             61
+##  6 ggplot2           53
 ##  7 magrittr          48
 ##  8 tibble            48
 ##  9 haven             37
