@@ -8,10 +8,12 @@ tverse_repo_df <-   data_frame(
   full_name = tidyverse_repos %>% map_chr("full_name"),
   description = tidyverse_repos %>% map_chr("description"),
   html_url = tidyverse_repos %>% map_chr("html_url"),
-  url = tidyverse_repos %>% map_chr("url")
+  url = tidyverse_repos %>% map_chr("url"),
+  has_issues = tidyverse_repos %>% map_lgl("has_issues"),
+  open_issues = tidyverse_repos %>% map_chr("open_issues")
 )
 
-rlib_repos <- gh(endpoint = "/orgs/:org/repos", org = "r-lib", limit = 50)
+rlib_repos <- gh(endpoint = "/orgs/:org/repos", org = "r-lib", type = "public")
 
 rlib_repo_df <- data_frame(
   repo = rlib_repos %>% map_chr("name"),
@@ -21,6 +23,7 @@ rlib_repo_df <- data_frame(
   url = rlib_repos %>% map_chr("url")
 )
 
+
 require(tidyverse)
 require(gh)
 #' @param gh_response
@@ -29,7 +32,9 @@ build_repo_frame <- function(gh_response) {
     repo = gh_response %>% map_chr("name"),
     full_name = gh_response %>% map_chr("full_name"),
     html_url = gh_response %>% map_chr("html_url"),
-    url = gh_response %>% map_chr("url")
+    url = gh_response %>% map_chr("url"),
+    has_issues = tidyverse_repos %>% map_lgl("has_issues"),
+    open_issues = tidyverse_repos %>% map_chr("open_issues")
   )
   return(df)
 }
