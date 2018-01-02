@@ -154,10 +154,5 @@ gh(endpoint = "https://api.github.com/repos/tidyverse/ggplot2/issues/2383/labels
 ## ]
 ```
 
-```r
-flat_iss <- flatten(iss_df$issue)
-flat_frame <- tibble::enframe(flat_iss)
-```
-
 
 [^1]: A total rip-off of Jenny Bryan's ["Analyze GitHub stuff with R"](https://github.com/jennybc/analyze-github-stuff-with-r)
