@@ -1,0 +1,29 @@
+repo,full_name,description,html_url,url
+ggplot2,tidyverse/ggplot2,An implementation of the Grammar of Graphics in R,https://github.com/tidyverse/ggplot2,https://api.github.com/repos/tidyverse/ggplot2
+lubridate,tidyverse/lubridate,Make working with dates in R just that little bit easier,https://github.com/tidyverse/lubridate,https://api.github.com/repos/tidyverse/lubridate
+stringr,tidyverse/stringr,A fresh approach to string manipulation in R,https://github.com/tidyverse/stringr,https://api.github.com/repos/tidyverse/stringr
+dplyr,tidyverse/dplyr,Dplyr: A grammar of data manipulation,https://github.com/tidyverse/dplyr,https://api.github.com/repos/tidyverse/dplyr
+readr,tidyverse/readr,"Read flat files (csv, tsv, fwf) into R",https://github.com/tidyverse/readr,https://api.github.com/repos/tidyverse/readr
+magrittr,tidyverse/magrittr,Improve the readability of R code with the pipe,https://github.com/tidyverse/magrittr,https://api.github.com/repos/tidyverse/magrittr
+tidyr,tidyverse/tidyr,Easily tidy data with spread and gather functions.,https://github.com/tidyverse/tidyr,https://api.github.com/repos/tidyverse/tidyr
+broom,tidyverse/broom,Convert statistical analysis objects from R into tidy format,https://github.com/tidyverse/broom,https://api.github.com/repos/tidyverse/broom
+purrr,tidyverse/purrr,A functional programming toolkit for R,https://github.com/tidyverse/purrr,https://api.github.com/repos/tidyverse/purrr
+haven,tidyverse/haven,"Read SPSS, Stata and SAS files from R",https://github.com/tidyverse/haven,https://api.github.com/repos/tidyverse/haven
+readxl,tidyverse/readxl,Read excel files (.xls and .xlsx) into R 🖇,https://github.com/tidyverse/readxl,https://api.github.com/repos/tidyverse/readxl
+reprex,tidyverse/reprex,"Render bits of R code for sharing, e.g., on GitHub or StackOverflow.",https://github.com/tidyverse/reprex,https://api.github.com/repos/tidyverse/reprex
+tibble,tidyverse/tibble,A modern re-imagining of the data frame,https://github.com/tidyverse/tibble,https://api.github.com/repos/tidyverse/tibble
+hms,tidyverse/hms,A simple class for storing time-of-day values,https://github.com/tidyverse/hms,https://api.github.com/repos/tidyverse/hms
+modelr,tidyverse/modelr,Helper functions for modelling,https://github.com/tidyverse/modelr,https://api.github.com/repos/tidyverse/modelr
+forcats,tidyverse/forcats,🐈🐈🐈🐈: tools for working with categorical variables (factors),https://github.com/tidyverse/forcats,https://api.github.com/repos/tidyverse/forcats
+tidyverse,tidyverse/tidyverse,Easily install and load packages from the tidyverse,https://github.com/tidyverse/tidyverse,https://api.github.com/repos/tidyverse/tidyverse
+tidytemplate,tidyverse/tidytemplate,A pkgdown template for core tidyverse packages,https://github.com/tidyverse/tidytemplate,https://api.github.com/repos/tidyverse/tidytemplate
+blob,tidyverse/blob,A simple S3 class for representing BLOBs,https://github.com/tidyverse/blob,https://api.github.com/repos/tidyverse/blob
+ggplot2-docs,tidyverse/ggplot2-docs,ggplot2 documentation. Auto-generated from ggplot2 sources by pkgdown,https://github.com/tidyverse/ggplot2-docs,https://api.github.com/repos/tidyverse/ggplot2-docs
+rlang,tidyverse/rlang,Low-level programming tools for R,https://github.com/tidyverse/rlang,https://api.github.com/repos/tidyverse/rlang
+glue,tidyverse/glue,"Glue strings to data in R. Small, fast, dependency free interpreted string literals.",https://github.com/tidyverse/glue,https://api.github.com/repos/tidyverse/glue
+style,tidyverse/style,A style guide for the R language,https://github.com/tidyverse/style,https://api.github.com/repos/tidyverse/style
+dbplyr,tidyverse/dbplyr,Database (DBI) backend for dplyr,https://github.com/tidyverse/dbplyr,https://api.github.com/repos/tidyverse/dbplyr
+googledrive,tidyverse/googledrive,Google Drive R API,https://github.com/tidyverse/googledrive,https://api.github.com/repos/tidyverse/googledrive
+googlesheets4,tidyverse/googlesheets4,Google Spreadsheets R API (reboot of the googlesheets package),https://github.com/tidyverse/googlesheets4,https://api.github.com/repos/tidyverse/googlesheets4
+tidyselect,tidyverse/tidyselect,A backend for selecting functions of the tidyverse,https://github.com/tidyverse/tidyselect,https://api.github.com/repos/tidyverse/tidyselect
+tidyverse.org,tidyverse/tidyverse.org,Source of tidyverse.org,https://github.com/tidyverse/tidyverse.org,https://api.github.com/repos/tidyverse/tidyverse.org

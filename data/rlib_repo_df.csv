@@ -1,0 +1,31 @@
+repo,full_name,description,html_url,url
+evaluate,r-lib/evaluate,A version of eval for R that returns more information about what happened,https://github.com/r-lib/evaluate,https://api.github.com/repos/r-lib/evaluate
+testthat,r-lib/testthat,An R 📦 to make testing 😀,https://github.com/r-lib/testthat,https://api.github.com/repos/r-lib/testthat
+memoise,r-lib/memoise,Easy memoisation for R,https://github.com/r-lib/memoise,https://api.github.com/repos/r-lib/memoise
+httr,r-lib/httr,httr: a friendly http package for R,https://github.com/r-lib/httr,https://api.github.com/repos/r-lib/httr
+pkgdown,r-lib/pkgdown,Generate static html documentation for an R package,https://github.com/r-lib/pkgdown,https://api.github.com/repos/r-lib/pkgdown
+rappdirs,r-lib/rappdirs,A port of AppDirs for R,https://github.com/r-lib/rappdirs,https://api.github.com/repos/r-lib/rappdirs
+svglite,r-lib/svglite,A lightweight svg graphics device for R,https://github.com/r-lib/svglite,https://api.github.com/repos/r-lib/svglite
+R6,r-lib/R6,R objects with reference semantics,https://github.com/r-lib/R6,https://api.github.com/repos/r-lib/R6
+pkgconfig,r-lib/pkgconfig,Private configuration for R packages,https://github.com/r-lib/pkgconfig,https://api.github.com/repos/r-lib/pkgconfig
+pingr,r-lib/pingr,"R package to ping, over TCP as well",https://github.com/r-lib/pingr,https://api.github.com/repos/r-lib/pingr
+crayon,r-lib/crayon,R package for colored terminal output,https://github.com/r-lib/crayon,https://api.github.com/repos/r-lib/crayon
+progress,r-lib/progress,Progress bar in your R terminal,https://github.com/r-lib/progress,https://api.github.com/repos/r-lib/progress
+covr,r-lib/covr,Test coverage reports for R,https://github.com/r-lib/covr,https://api.github.com/repos/r-lib/covr
+xml2,r-lib/xml2,Bindings to libxml2,https://github.com/r-lib/xml2,https://api.github.com/repos/r-lib/xml2
+clisymbols,r-lib/clisymbols,"Unicode symbols for CLI applications, with fallbacks",https://github.com/r-lib/clisymbols,https://api.github.com/repos/r-lib/clisymbols
+withr,r-lib/withr,Methods For Temporarily Modifying Global State,https://github.com/r-lib/withr,https://api.github.com/repos/r-lib/withr
+whoami,r-lib/whoami,"Username, full name, email address and GitHub username of the current user",https://github.com/r-lib/whoami,https://api.github.com/repos/r-lib/whoami
+gh,r-lib/gh,Minimalistic GitHub API client in R,https://github.com/r-lib/gh,https://api.github.com/repos/r-lib/gh
+desc,r-lib/desc,Manipulate DESCRIPTION files,https://github.com/r-lib/desc,https://api.github.com/repos/r-lib/desc
+gargle,r-lib/gargle,All the Google auth things,https://github.com/r-lib/gargle,https://api.github.com/repos/r-lib/gargle
+remotes,r-lib/remotes,"Install R packages from GitHub, Bitbucket, git, svn repositories, URLs",https://github.com/r-lib/remotes,https://api.github.com/repos/r-lib/remotes
+installgithub.app,r-lib/installgithub.app,"Install an R package from GitHub, with a one liner",https://github.com/r-lib/installgithub.app,https://api.github.com/repos/r-lib/installgithub.app
+rcmdcheck,r-lib/rcmdcheck,Run R CMD check from R and collect the results,https://github.com/r-lib/rcmdcheck,https://api.github.com/repos/r-lib/rcmdcheck
+callr,r-lib/callr,Call R from R,https://github.com/r-lib/callr,https://api.github.com/repos/r-lib/callr
+revdepcheck,r-lib/revdepcheck,R package reverse dependency checking,https://github.com/r-lib/revdepcheck,https://api.github.com/repos/r-lib/revdepcheck
+processx,r-lib/processx,Execute and Control System Processes from R,https://github.com/r-lib/processx,https://api.github.com/repos/r-lib/processx
+debugme,r-lib/debugme,Easy and efficient debugging for R packages,https://github.com/r-lib/debugme,https://api.github.com/repos/r-lib/debugme
+usethis,r-lib/usethis,Set up commonly used 📦 components,https://github.com/r-lib/usethis,https://api.github.com/repos/r-lib/usethis
+pkgload,r-lib/pkgload,Simulate installing and loading a package,https://github.com/r-lib/pkgload,https://api.github.com/repos/r-lib/pkgload
+httrmock,r-lib/httrmock,"Mock HTTP requests, WORK IN PROGRESS, DO NOT USE IT!",https://github.com/r-lib/httrmock,https://api.github.com/repos/r-lib/httrmock
