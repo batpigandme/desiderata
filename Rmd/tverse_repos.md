@@ -155,4 +155,117 @@ gh(endpoint = "https://api.github.com/repos/tidyverse/ggplot2/issues/2383/labels
 ```
 
 
+```r
+dplyr_labs <- gh(endpoint = "https://api.github.com/repos/tidyverse/dplyr/labels")
+
+str(dplyr_labs)
+```
+
+```
+## List of 12
+##  $ :List of 5
+##   ..$ id     : int 17708198
+##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/bug"
+##   ..$ name   : chr "bug"
+##   ..$ color  : chr "e02a2a"
+##   ..$ default: logi TRUE
+##  $ :List of 5
+##   ..$ id     : int 276202384
+##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/data%20frame"
+##   ..$ name   : chr "data frame"
+##   ..$ color  : chr "eeeeee"
+##   ..$ default: logi FALSE
+##  $ :List of 5
+##   ..$ id     : int 213548409
+##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/database"
+##   ..$ name   : chr "database"
+##   ..$ color  : chr "eeeeee"
+##   ..$ default: logi FALSE
+##  $ :List of 5
+##   ..$ id     : int 674867158
+##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/docs"
+##   ..$ name   : chr "docs"
+##   ..$ color  : chr "0052cc"
+##   ..$ default: logi FALSE
+##  $ :List of 5
+##   ..$ id     : int 86585992
+##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/documentation"
+##   ..$ name   : chr "documentation"
+##   ..$ color  : chr "eeeeee"
+##   ..$ default: logi FALSE
+##  $ :List of 5
+##   ..$ id     : int 17708200
+##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/feature"
+##   ..$ name   : chr "feature"
+##   ..$ color  : chr "009800"
+##   ..$ default: logi FALSE
+##  $ :List of 5
+##   ..$ id     : int 334471510
+##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/generic"
+##   ..$ name   : chr "generic"
+##   ..$ color  : chr "eeeeee"
+##   ..$ default: logi FALSE
+##  $ :List of 5
+##   ..$ id     : int 544019306
+##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/nse"
+##   ..$ name   : chr "nse"
+##   ..$ color  : chr "eeeeee"
+##   ..$ default: logi FALSE
+##  $ :List of 5
+##   ..$ id     : int 529648245
+##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/performance"
+##   ..$ name   : chr "performance"
+##   ..$ color  : chr "fbca04"
+##   ..$ default: logi FALSE
+##  $ :List of 5
+##   ..$ id     : int 334407164
+##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/reprex"
+##   ..$ name   : chr "reprex"
+##   ..$ color  : chr "eb6420"
+##   ..$ default: logi FALSE
+##  $ :List of 5
+##   ..$ id     : int 544019342
+##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/vector"
+##   ..$ name   : chr "vector"
+##   ..$ color  : chr "eeeeee"
+##   ..$ default: logi FALSE
+##  $ :List of 5
+##   ..$ id     : int 674867157
+##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/wip"
+##   ..$ name   : chr "wip"
+##   ..$ color  : chr "eb6420"
+##   ..$ default: logi FALSE
+##  - attr(*, "method")= chr "GET"
+##  - attr(*, "response")=List of 24
+##   ..$ server                       : chr "GitHub.com"
+##   ..$ date                         : chr "Tue, 02 Jan 2018 15:27:19 GMT"
+##   ..$ content-type                 : chr "application/json; charset=utf-8"
+##   ..$ transfer-encoding            : chr "chunked"
+##   ..$ status                       : chr "200 OK"
+##   ..$ x-ratelimit-limit            : chr "5000"
+##   ..$ x-ratelimit-remaining        : chr "4603"
+##   ..$ x-ratelimit-reset            : chr "1514907576"
+##   ..$ cache-control                : chr "private, max-age=60, s-maxage=60"
+##   ..$ vary                         : chr "Accept, Authorization, Cookie, X-GitHub-OTP"
+##   ..$ etag                         : chr "W/\"975d3de60ab0f315adf08d5632068258\""
+##   ..$ x-oauth-scopes               : chr ""
+##   ..$ x-accepted-oauth-scopes      : chr "repo"
+##   ..$ x-github-media-type          : chr "github.v3; format=json"
+##   ..$ access-control-expose-headers: chr "ETag, Link, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Sco"| __truncated__
+##   ..$ access-control-allow-origin  : chr "*"
+##   ..$ content-security-policy      : chr "default-src 'none'"
+##   ..$ strict-transport-security    : chr "max-age=31536000; includeSubdomains; preload"
+##   ..$ x-content-type-options       : chr "nosniff"
+##   ..$ x-frame-options              : chr "deny"
+##   ..$ x-xss-protection             : chr "1; mode=block"
+##   ..$ x-runtime-rack               : chr "0.043253"
+##   ..$ content-encoding             : chr "gzip"
+##   ..$ x-github-request-id          : chr "E223:0610:5A3284D:12574B8C:5A4BA4D7"
+##   ..- attr(*, "class")= chr [1:2] "insensitive" "list"
+##  - attr(*, ".send_headers")= Named chr [1:3] "application/vnd.github.v3+json" "https://github.com/r-lib/gh" "token 66452b382bd7eb10455de69660631e54ee80a109"
+##   ..- attr(*, "names")= chr [1:3] "Accept" "User-Agent" "Authorization"
+##  - attr(*, "class")= chr [1:2] "gh_response" "list"
+```
+
+
 [^1]: A total rip-off of Jenny Bryan's ["Analyze GitHub stuff with R"](https://github.com/jennybc/analyze-github-stuff-with-r)
