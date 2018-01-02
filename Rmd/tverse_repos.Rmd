@@ -36,12 +36,21 @@ iss_df <-
 str(iss_df, max.level = 1)
 rep_iss <- flatten(iss_df$reprex_issues)
 keeps <- tibble(reprex_issue = keep(rep_iss,is.list))
+
+iss_df %>%
+  mutate(reprex_n = reprex_issues %>% map_int(length)) %>%
+  select(-reprex_issues) %>%
+  select(-issue) %>%
+  filter(reprex_n > 0) %>%
+  arrange(desc(reprex_n)) %>%
+  print(n = nrow(.))
 ```
 
 ```{r}
 iss_df %>%
   mutate(n_open = issue %>% map_int(length)) %>%
   select(-issue) %>%
+  select(-reprex_issues) %>%
   filter(n_open > 0) %>%
   arrange(desc(n_open)) %>%
   print(n = nrow(.))

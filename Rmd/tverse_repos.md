@@ -47,6 +47,48 @@ str(iss_df, max.level = 1)
 ```r
 rep_iss <- flatten(iss_df$reprex_issues)
 keeps <- tibble(reprex_issue = keep(rep_iss,is.list))
+
+iss_df %>%
+  mutate(reprex_n = reprex_issues %>% map_int(length)) %>%
+  select(-reprex_issues) %>%
+  select(-issue) %>%
+  filter(reprex_n > 0) %>%
+  arrange(desc(reprex_n)) %>%
+  print(n = nrow(.))
+```
+
+```
+## # A tibble: 28 x 2
+##    repo          reprex_n
+##    <chr>            <int>
+##  1 dplyr                5
+##  2 ggplot2              1
+##  3 lubridate            1
+##  4 stringr              1
+##  5 readr                1
+##  6 magrittr             1
+##  7 tidyr                1
+##  8 broom                1
+##  9 purrr                1
+## 10 haven                1
+## 11 readxl               1
+## 12 reprex               1
+## 13 tibble               1
+## 14 hms                  1
+## 15 modelr               1
+## 16 forcats              1
+## 17 tidyverse            1
+## 18 tidytemplate         1
+## 19 blob                 1
+## 20 ggplot2-docs         1
+## 21 rlang                1
+## 22 glue                 1
+## 23 style                1
+## 24 dbplyr               1
+## 25 googledrive          1
+## 26 googlesheets4        1
+## 27 tidyselect           1
+## 28 tidyverse.org        1
 ```
 
 
@@ -54,43 +96,44 @@ keeps <- tibble(reprex_issue = keep(rep_iss,is.list))
 iss_df %>%
   mutate(n_open = issue %>% map_int(length)) %>%
   select(-issue) %>%
+  select(-reprex_issues) %>%
   filter(n_open > 0) %>%
   arrange(desc(n_open)) %>%
   print(n = nrow(.))
 ```
 
 ```
-## # A tibble: 28 x 3
-##    repo          reprex_issues     n_open
-##    <chr>         <list>             <int>
-##  1 dplyr         <S3: gh_response>    143
-##  2 broom         <S3: gh_response>    130
-##  3 rlang         <S3: gh_response>     75
-##  4 purrr         <S3: gh_response>     74
-##  5 readr         <S3: gh_response>     61
-##  6 ggplot2       <S3: gh_response>     53
-##  7 magrittr      <S3: gh_response>     48
-##  8 tibble        <S3: gh_response>     48
-##  9 haven         <S3: gh_response>     37
-## 10 readxl        <S3: gh_response>     32
-## 11 modelr        <S3: gh_response>     30
-## 12 forcats       <S3: gh_response>     27
-## 13 lubridate     <S3: gh_response>     25
-## 14 googledrive   <S3: gh_response>     20
-## 15 tidyr         <S3: gh_response>     18
-## 16 reprex        <S3: gh_response>     17
-## 17 style         <S3: gh_response>     13
-## 18 tidyverse.org <S3: gh_response>     13
-## 19 tidyverse     <S3: gh_response>     12
-## 20 stringr       <S3: gh_response>     10
-## 21 hms           <S3: gh_response>      8
-## 22 glue          <S3: gh_response>      3
-## 23 googlesheets4 <S3: gh_response>      2
-## 24 tidytemplate  <S3: gh_response>      1
-## 25 blob          <S3: gh_response>      1
-## 26 ggplot2-docs  <S3: gh_response>      1
-## 27 dbplyr        <S3: gh_response>      1
-## 28 tidyselect    <S3: gh_response>      1
+## # A tibble: 28 x 2
+##    repo          n_open
+##    <chr>          <int>
+##  1 dplyr            146
+##  2 broom            130
+##  3 purrr             76
+##  4 rlang             74
+##  5 readr             61
+##  6 ggplot2           52
+##  7 magrittr          48
+##  8 tibble            48
+##  9 haven             37
+## 10 readxl            32
+## 11 modelr            30
+## 12 forcats           27
+## 13 lubridate         25
+## 14 googledrive       20
+## 15 tidyr             18
+## 16 reprex            17
+## 17 style             13
+## 18 tidyverse.org     13
+## 19 tidyverse         12
+## 20 stringr           10
+## 21 hms                8
+## 22 glue               3
+## 23 googlesheets4      2
+## 24 tidytemplate       1
+## 25 blob               1
+## 26 ggplot2-docs       1
+## 27 dbplyr             1
+## 28 tidyselect         1
 ```
 
 
@@ -100,7 +143,15 @@ gh(endpoint = "https://api.github.com/repos/tidyverse/ggplot2/issues/2383/labels
 ```
 
 ```
-## ""
+## [
+##   {
+##     "id": 415860814,
+##     "url": "https://api.github.com/repos/tidyverse/ggplot2/labels/reprex",
+##     "name": "reprex",
+##     "color": "eb6420",
+##     "default": false
+##   }
+## ]
 ```
 
 ```r
