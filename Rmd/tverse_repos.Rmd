@@ -64,7 +64,12 @@ gh(endpoint = "https://api.github.com/repos/tidyverse/ggplot2/issues/2383/labels
 ```{r}
 dplyr_labs <- gh(endpoint = "https://api.github.com/repos/tidyverse/dplyr/labels")
 
-str(dplyr_labs)
+labs_df <-  data_frame(
+    label_name = dplyr_labs %>% map_chr("name"),
+    label_url = dplyr_labs %>% map_chr("url")
+    )
+
+labs_df
 ```
 
 
