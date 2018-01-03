@@ -31,7 +31,9 @@ releases_df <- data_frame(
   date = flat_release %>%
     map_chr("created_at"),
   url = flat_release %>%
-    map_chr("url")
+    map_chr("url"),
+  html_url = flat_release %>%
+    map_chr("html_url")
 )
 
 
@@ -40,7 +42,7 @@ rx <- '(\\/(?:[^\\/]*\\/){4}([^\\/]+)\\/)'
 releases_df <- releases_df %>%
   mutate(date = as.Date(date)) %>%
   mutate(repo_name = str_match(url, rx)[, 3]) %>%
-  select(c("repo_name", "release_name", "date", "url"))
+  select(c("repo_name", "release_name", "date", "url", "html_url"))
 
 
 # for one -----------------------------------------------------------------
