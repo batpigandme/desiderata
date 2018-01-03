@@ -31,19 +31,12 @@ iss_df <-
       map(~ gh(repo = .x, endpoint = "/repos/tidyverse/:repo/issues",
                .limit = Inf)),
     reprex_issues = repo %>%
-      map(~ gh(repo = .x, endpoint = "/repos/tidyverse/:repo/issues", labels = "reprex", .limit = Inf))
+      map(~ gh(repo = .x, endpoint = "/repos/tidyverse/:repo/issues", 
+               labels = "reprex", .limit = Inf))
     )
 str(iss_df, max.level = 1)
 rep_iss <- flatten(iss_df$reprex_issues)
 keeps <- tibble(reprex_issue = keep(rep_iss,is.list))
-
-iss_df %>%
-  mutate(reprex_n = reprex_issues %>% map_int(length)) %>%
-  select(-reprex_issues) %>%
-  select(-issue) %>%
-  filter(reprex_n > 0) %>%
-  arrange(desc(reprex_n)) %>%
-  print(n = nrow(.))
 ```
 
 ```{r}
@@ -53,6 +46,16 @@ iss_df %>%
   select(-reprex_issues) %>%
   filter(n_open > 0) %>%
   arrange(desc(n_open)) %>%
+  print(n = nrow(.))
+```
+
+```{r}
+iss_df %>%
+  mutate(reprex_n = reprex_issues %>% map_int(length)) %>%
+  select(-reprex_issues) %>%
+  select(-issue) %>%
+  filter(reprex_n > 0) %>%
+  arrange(desc(reprex_n)) %>%
   print(n = nrow(.))
 ```
 

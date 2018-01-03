@@ -321,7 +321,8 @@ library(gh)</code></pre>
       map(~ gh(repo = .x, endpoint = &quot;/repos/tidyverse/:repo/issues&quot;,
                .limit = Inf)),
     reprex_issues = repo %&gt;%
-      map(~ gh(repo = .x, endpoint = &quot;/repos/tidyverse/:repo/issues&quot;, labels = &quot;reprex&quot;, .limit = Inf))
+      map(~ gh(repo = .x, endpoint = &quot;/repos/tidyverse/:repo/issues&quot;, 
+               labels = &quot;reprex&quot;, .limit = Inf))
     )
 str(iss_df, max.level = 1)</code></pre>
 <pre><code>## Classes 'tbl_df', 'tbl' and 'data.frame':    28 obs. of  3 variables:
@@ -329,9 +330,46 @@ str(iss_df, max.level = 1)</code></pre>
 ##  $ issue        :List of 28
 ##  $ reprex_issues:List of 28</code></pre>
 <pre class="r"><code>rep_iss &lt;- flatten(iss_df$reprex_issues)
-keeps &lt;- tibble(reprex_issue = keep(rep_iss,is.list))
-
-iss_df %&gt;%
+keeps &lt;- tibble(reprex_issue = keep(rep_iss,is.list))</code></pre>
+<pre class="r"><code>iss_df %&gt;%
+  mutate(n_open = issue %&gt;% map_int(length)) %&gt;%
+  select(-issue) %&gt;%
+  select(-reprex_issues) %&gt;%
+  filter(n_open &gt; 0) %&gt;%
+  arrange(desc(n_open)) %&gt;%
+  print(n = nrow(.))</code></pre>
+<pre><code>## # A tibble: 28 x 2
+##    repo          n_open
+##    &lt;chr&gt;          &lt;int&gt;
+##  1 dplyr            145
+##  2 broom            129
+##  3 purrr             76
+##  4 rlang             74
+##  5 readr             61
+##  6 ggplot2           50
+##  7 tibble            49
+##  8 magrittr          48
+##  9 haven             38
+## 10 readxl            32
+## 11 modelr            30
+## 12 forcats           27
+## 13 lubridate         25
+## 14 googledrive       20
+## 15 tidyr             18
+## 16 reprex            17
+## 17 tidyverse.org     15
+## 18 style             13
+## 19 tidyverse         12
+## 20 stringr           11
+## 21 hms                8
+## 22 glue               3
+## 23 googlesheets4      2
+## 24 tidytemplate       1
+## 25 blob               1
+## 26 ggplot2-docs       1
+## 27 dbplyr             1
+## 28 tidyselect         1</code></pre>
+<pre class="r"><code>iss_df %&gt;%
   mutate(reprex_n = reprex_issues %&gt;% map_int(length)) %&gt;%
   select(-reprex_issues) %&gt;%
   select(-issue) %&gt;%
@@ -369,161 +407,32 @@ iss_df %&gt;%
 ## 26 googlesheets4        1
 ## 27 tidyselect           1
 ## 28 tidyverse.org        1</code></pre>
-<pre class="r"><code>iss_df %&gt;%
-  mutate(n_open = issue %&gt;% map_int(length)) %&gt;%
-  select(-issue) %&gt;%
-  select(-reprex_issues) %&gt;%
-  filter(n_open &gt; 0) %&gt;%
-  arrange(desc(n_open)) %&gt;%
-  print(n = nrow(.))</code></pre>
-<pre><code>## # A tibble: 28 x 2
-##    repo          n_open
-##    &lt;chr&gt;          &lt;int&gt;
-##  1 dplyr            146
-##  2 broom            130
-##  3 purrr             76
-##  4 rlang             74
-##  5 readr             61
-##  6 ggplot2           52
-##  7 magrittr          48
-##  8 tibble            48
-##  9 haven             37
-## 10 readxl            32
-## 11 modelr            30
-## 12 forcats           27
-## 13 lubridate         25
-## 14 googledrive       20
-## 15 tidyr             18
-## 16 reprex            17
-## 17 style             13
-## 18 tidyverse.org     13
-## 19 tidyverse         12
-## 20 stringr           10
-## 21 hms                8
-## 22 glue               3
-## 23 googlesheets4      2
-## 24 tidytemplate       1
-## 25 blob               1
-## 26 ggplot2-docs       1
-## 27 dbplyr             1
-## 28 tidyselect         1</code></pre>
 <pre class="r"><code># gh(endpoint = &quot;/repos/tidyverse/ggplot2/issues/1904/labels&quot;)
 gh(endpoint = &quot;https://api.github.com/repos/tidyverse/ggplot2/issues/2383/labels&quot;)</code></pre>
-<pre><code>## [
-##   {
-##     &quot;id&quot;: 415860814,
-##     &quot;url&quot;: &quot;https://api.github.com/repos/tidyverse/ggplot2/labels/reprex&quot;,
-##     &quot;name&quot;: &quot;reprex&quot;,
-##     &quot;color&quot;: &quot;eb6420&quot;,
-##     &quot;default&quot;: false
-##   }
-## ]</code></pre>
+<pre><code>## &quot;&quot;</code></pre>
 <pre class="r"><code>dplyr_labs &lt;- gh(endpoint = &quot;https://api.github.com/repos/tidyverse/dplyr/labels&quot;)
 
-str(dplyr_labs)</code></pre>
-<pre><code>## List of 12
-##  $ :List of 5
-##   ..$ id     : int 17708198
-##   ..$ url    : chr &quot;https://api.github.com/repos/tidyverse/dplyr/labels/bug&quot;
-##   ..$ name   : chr &quot;bug&quot;
-##   ..$ color  : chr &quot;e02a2a&quot;
-##   ..$ default: logi TRUE
-##  $ :List of 5
-##   ..$ id     : int 276202384
-##   ..$ url    : chr &quot;https://api.github.com/repos/tidyverse/dplyr/labels/data%20frame&quot;
-##   ..$ name   : chr &quot;data frame&quot;
-##   ..$ color  : chr &quot;eeeeee&quot;
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 213548409
-##   ..$ url    : chr &quot;https://api.github.com/repos/tidyverse/dplyr/labels/database&quot;
-##   ..$ name   : chr &quot;database&quot;
-##   ..$ color  : chr &quot;eeeeee&quot;
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 674867158
-##   ..$ url    : chr &quot;https://api.github.com/repos/tidyverse/dplyr/labels/docs&quot;
-##   ..$ name   : chr &quot;docs&quot;
-##   ..$ color  : chr &quot;0052cc&quot;
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 86585992
-##   ..$ url    : chr &quot;https://api.github.com/repos/tidyverse/dplyr/labels/documentation&quot;
-##   ..$ name   : chr &quot;documentation&quot;
-##   ..$ color  : chr &quot;eeeeee&quot;
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 17708200
-##   ..$ url    : chr &quot;https://api.github.com/repos/tidyverse/dplyr/labels/feature&quot;
-##   ..$ name   : chr &quot;feature&quot;
-##   ..$ color  : chr &quot;009800&quot;
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 334471510
-##   ..$ url    : chr &quot;https://api.github.com/repos/tidyverse/dplyr/labels/generic&quot;
-##   ..$ name   : chr &quot;generic&quot;
-##   ..$ color  : chr &quot;eeeeee&quot;
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 544019306
-##   ..$ url    : chr &quot;https://api.github.com/repos/tidyverse/dplyr/labels/nse&quot;
-##   ..$ name   : chr &quot;nse&quot;
-##   ..$ color  : chr &quot;eeeeee&quot;
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 529648245
-##   ..$ url    : chr &quot;https://api.github.com/repos/tidyverse/dplyr/labels/performance&quot;
-##   ..$ name   : chr &quot;performance&quot;
-##   ..$ color  : chr &quot;fbca04&quot;
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 334407164
-##   ..$ url    : chr &quot;https://api.github.com/repos/tidyverse/dplyr/labels/reprex&quot;
-##   ..$ name   : chr &quot;reprex&quot;
-##   ..$ color  : chr &quot;eb6420&quot;
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 544019342
-##   ..$ url    : chr &quot;https://api.github.com/repos/tidyverse/dplyr/labels/vector&quot;
-##   ..$ name   : chr &quot;vector&quot;
-##   ..$ color  : chr &quot;eeeeee&quot;
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 674867157
-##   ..$ url    : chr &quot;https://api.github.com/repos/tidyverse/dplyr/labels/wip&quot;
-##   ..$ name   : chr &quot;wip&quot;
-##   ..$ color  : chr &quot;eb6420&quot;
-##   ..$ default: logi FALSE
-##  - attr(*, &quot;method&quot;)= chr &quot;GET&quot;
-##  - attr(*, &quot;response&quot;)=List of 24
-##   ..$ server                       : chr &quot;GitHub.com&quot;
-##   ..$ date                         : chr &quot;Tue, 02 Jan 2018 15:27:19 GMT&quot;
-##   ..$ content-type                 : chr &quot;application/json; charset=utf-8&quot;
-##   ..$ transfer-encoding            : chr &quot;chunked&quot;
-##   ..$ status                       : chr &quot;200 OK&quot;
-##   ..$ x-ratelimit-limit            : chr &quot;5000&quot;
-##   ..$ x-ratelimit-remaining        : chr &quot;4603&quot;
-##   ..$ x-ratelimit-reset            : chr &quot;1514907576&quot;
-##   ..$ cache-control                : chr &quot;private, max-age=60, s-maxage=60&quot;
-##   ..$ vary                         : chr &quot;Accept, Authorization, Cookie, X-GitHub-OTP&quot;
-##   ..$ etag                         : chr &quot;W/\&quot;975d3de60ab0f315adf08d5632068258\&quot;&quot;
-##   ..$ x-oauth-scopes               : chr &quot;&quot;
-##   ..$ x-accepted-oauth-scopes      : chr &quot;repo&quot;
-##   ..$ x-github-media-type          : chr &quot;github.v3; format=json&quot;
-##   ..$ access-control-expose-headers: chr &quot;ETag, Link, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Sco&quot;| __truncated__
-##   ..$ access-control-allow-origin  : chr &quot;*&quot;
-##   ..$ content-security-policy      : chr &quot;default-src 'none'&quot;
-##   ..$ strict-transport-security    : chr &quot;max-age=31536000; includeSubdomains; preload&quot;
-##   ..$ x-content-type-options       : chr &quot;nosniff&quot;
-##   ..$ x-frame-options              : chr &quot;deny&quot;
-##   ..$ x-xss-protection             : chr &quot;1; mode=block&quot;
-##   ..$ x-runtime-rack               : chr &quot;0.043253&quot;
-##   ..$ content-encoding             : chr &quot;gzip&quot;
-##   ..$ x-github-request-id          : chr &quot;E223:0610:5A3284D:12574B8C:5A4BA4D7&quot;
-##   ..- attr(*, &quot;class&quot;)= chr [1:2] &quot;insensitive&quot; &quot;list&quot;
-##  - attr(*, &quot;.send_headers&quot;)= Named chr [1:3] &quot;application/vnd.github.v3+json&quot; &quot;https://github.com/r-lib/gh&quot; &quot;token 66452b382bd7eb10455de69660631e54ee80a109&quot;
-##   ..- attr(*, &quot;names&quot;)= chr [1:3] &quot;Accept&quot; &quot;User-Agent&quot; &quot;Authorization&quot;
-##  - attr(*, &quot;class&quot;)= chr [1:2] &quot;gh_response&quot; &quot;list&quot;</code></pre>
+labs_df &lt;-  data_frame(
+    label_name = dplyr_labs %&gt;% map_chr(&quot;name&quot;),
+    label_url = dplyr_labs %&gt;% map_chr(&quot;url&quot;)
+    )
+
+labs_df</code></pre>
+<pre><code>## # A tibble: 12 x 2
+##    label_name    label_url                                                
+##    &lt;chr&gt;         &lt;chr&gt;                                                    
+##  1 bug           https://api.github.com/repos/tidyverse/dplyr/labels/bug  
+##  2 data frame    https://api.github.com/repos/tidyverse/dplyr/labels/data…
+##  3 database      https://api.github.com/repos/tidyverse/dplyr/labels/data…
+##  4 docs          https://api.github.com/repos/tidyverse/dplyr/labels/docs 
+##  5 documentation https://api.github.com/repos/tidyverse/dplyr/labels/docu…
+##  6 feature       https://api.github.com/repos/tidyverse/dplyr/labels/feat…
+##  7 generic       https://api.github.com/repos/tidyverse/dplyr/labels/gene…
+##  8 nse           https://api.github.com/repos/tidyverse/dplyr/labels/nse  
+##  9 performance   https://api.github.com/repos/tidyverse/dplyr/labels/perf…
+## 10 reprex        https://api.github.com/repos/tidyverse/dplyr/labels/repr…
+## 11 vector        https://api.github.com/repos/tidyverse/dplyr/labels/vect…
+## 12 wip           https://api.github.com/repos/tidyverse/dplyr/labels/wip</code></pre>
 <section class="footnotes">
 <hr />
 <ol>

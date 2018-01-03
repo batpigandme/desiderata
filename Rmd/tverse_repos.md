@@ -32,7 +32,8 @@ iss_df <-
       map(~ gh(repo = .x, endpoint = "/repos/tidyverse/:repo/issues",
                .limit = Inf)),
     reprex_issues = repo %>%
-      map(~ gh(repo = .x, endpoint = "/repos/tidyverse/:repo/issues", labels = "reprex", .limit = Inf))
+      map(~ gh(repo = .x, endpoint = "/repos/tidyverse/:repo/issues", 
+               labels = "reprex", .limit = Inf))
     )
 str(iss_df, max.level = 1)
 ```
@@ -47,7 +48,55 @@ str(iss_df, max.level = 1)
 ```r
 rep_iss <- flatten(iss_df$reprex_issues)
 keeps <- tibble(reprex_issue = keep(rep_iss,is.list))
+```
 
+
+```r
+iss_df %>%
+  mutate(n_open = issue %>% map_int(length)) %>%
+  select(-issue) %>%
+  select(-reprex_issues) %>%
+  filter(n_open > 0) %>%
+  arrange(desc(n_open)) %>%
+  print(n = nrow(.))
+```
+
+```
+## # A tibble: 28 x 2
+##    repo          n_open
+##    <chr>          <int>
+##  1 dplyr            145
+##  2 broom            129
+##  3 purrr             76
+##  4 rlang             74
+##  5 readr             61
+##  6 ggplot2           50
+##  7 tibble            49
+##  8 magrittr          48
+##  9 haven             38
+## 10 readxl            32
+## 11 modelr            30
+## 12 forcats           27
+## 13 lubridate         25
+## 14 googledrive       20
+## 15 tidyr             18
+## 16 reprex            17
+## 17 tidyverse.org     15
+## 18 style             13
+## 19 tidyverse         12
+## 20 stringr           11
+## 21 hms                8
+## 22 glue               3
+## 23 googlesheets4      2
+## 24 tidytemplate       1
+## 25 blob               1
+## 26 ggplot2-docs       1
+## 27 dbplyr             1
+## 28 tidyselect         1
+```
+
+
+```r
 iss_df %>%
   mutate(reprex_n = reprex_issues %>% map_int(length)) %>%
   select(-reprex_issues) %>%
@@ -93,178 +142,42 @@ iss_df %>%
 
 
 ```r
-iss_df %>%
-  mutate(n_open = issue %>% map_int(length)) %>%
-  select(-issue) %>%
-  select(-reprex_issues) %>%
-  filter(n_open > 0) %>%
-  arrange(desc(n_open)) %>%
-  print(n = nrow(.))
-```
-
-```
-## # A tibble: 28 x 2
-##    repo          n_open
-##    <chr>          <int>
-##  1 dplyr            146
-##  2 broom            130
-##  3 purrr             76
-##  4 rlang             74
-##  5 readr             61
-##  6 ggplot2           52
-##  7 magrittr          48
-##  8 tibble            48
-##  9 haven             37
-## 10 readxl            32
-## 11 modelr            30
-## 12 forcats           27
-## 13 lubridate         25
-## 14 googledrive       20
-## 15 tidyr             18
-## 16 reprex            17
-## 17 style             13
-## 18 tidyverse.org     13
-## 19 tidyverse         12
-## 20 stringr           10
-## 21 hms                8
-## 22 glue               3
-## 23 googlesheets4      2
-## 24 tidytemplate       1
-## 25 blob               1
-## 26 ggplot2-docs       1
-## 27 dbplyr             1
-## 28 tidyselect         1
-```
-
-
-```r
 # gh(endpoint = "/repos/tidyverse/ggplot2/issues/1904/labels")
 gh(endpoint = "https://api.github.com/repos/tidyverse/ggplot2/issues/2383/labels")
 ```
 
 ```
-## [
-##   {
-##     "id": 415860814,
-##     "url": "https://api.github.com/repos/tidyverse/ggplot2/labels/reprex",
-##     "name": "reprex",
-##     "color": "eb6420",
-##     "default": false
-##   }
-## ]
+## ""
 ```
 
 
 ```r
 dplyr_labs <- gh(endpoint = "https://api.github.com/repos/tidyverse/dplyr/labels")
 
-str(dplyr_labs)
+labs_df <-  data_frame(
+    label_name = dplyr_labs %>% map_chr("name"),
+    label_url = dplyr_labs %>% map_chr("url")
+    )
+
+labs_df
 ```
 
 ```
-## List of 12
-##  $ :List of 5
-##   ..$ id     : int 17708198
-##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/bug"
-##   ..$ name   : chr "bug"
-##   ..$ color  : chr "e02a2a"
-##   ..$ default: logi TRUE
-##  $ :List of 5
-##   ..$ id     : int 276202384
-##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/data%20frame"
-##   ..$ name   : chr "data frame"
-##   ..$ color  : chr "eeeeee"
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 213548409
-##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/database"
-##   ..$ name   : chr "database"
-##   ..$ color  : chr "eeeeee"
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 674867158
-##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/docs"
-##   ..$ name   : chr "docs"
-##   ..$ color  : chr "0052cc"
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 86585992
-##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/documentation"
-##   ..$ name   : chr "documentation"
-##   ..$ color  : chr "eeeeee"
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 17708200
-##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/feature"
-##   ..$ name   : chr "feature"
-##   ..$ color  : chr "009800"
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 334471510
-##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/generic"
-##   ..$ name   : chr "generic"
-##   ..$ color  : chr "eeeeee"
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 544019306
-##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/nse"
-##   ..$ name   : chr "nse"
-##   ..$ color  : chr "eeeeee"
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 529648245
-##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/performance"
-##   ..$ name   : chr "performance"
-##   ..$ color  : chr "fbca04"
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 334407164
-##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/reprex"
-##   ..$ name   : chr "reprex"
-##   ..$ color  : chr "eb6420"
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 544019342
-##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/vector"
-##   ..$ name   : chr "vector"
-##   ..$ color  : chr "eeeeee"
-##   ..$ default: logi FALSE
-##  $ :List of 5
-##   ..$ id     : int 674867157
-##   ..$ url    : chr "https://api.github.com/repos/tidyverse/dplyr/labels/wip"
-##   ..$ name   : chr "wip"
-##   ..$ color  : chr "eb6420"
-##   ..$ default: logi FALSE
-##  - attr(*, "method")= chr "GET"
-##  - attr(*, "response")=List of 24
-##   ..$ server                       : chr "GitHub.com"
-##   ..$ date                         : chr "Tue, 02 Jan 2018 15:27:19 GMT"
-##   ..$ content-type                 : chr "application/json; charset=utf-8"
-##   ..$ transfer-encoding            : chr "chunked"
-##   ..$ status                       : chr "200 OK"
-##   ..$ x-ratelimit-limit            : chr "5000"
-##   ..$ x-ratelimit-remaining        : chr "4603"
-##   ..$ x-ratelimit-reset            : chr "1514907576"
-##   ..$ cache-control                : chr "private, max-age=60, s-maxage=60"
-##   ..$ vary                         : chr "Accept, Authorization, Cookie, X-GitHub-OTP"
-##   ..$ etag                         : chr "W/\"975d3de60ab0f315adf08d5632068258\""
-##   ..$ x-oauth-scopes               : chr ""
-##   ..$ x-accepted-oauth-scopes      : chr "repo"
-##   ..$ x-github-media-type          : chr "github.v3; format=json"
-##   ..$ access-control-expose-headers: chr "ETag, Link, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Sco"| __truncated__
-##   ..$ access-control-allow-origin  : chr "*"
-##   ..$ content-security-policy      : chr "default-src 'none'"
-##   ..$ strict-transport-security    : chr "max-age=31536000; includeSubdomains; preload"
-##   ..$ x-content-type-options       : chr "nosniff"
-##   ..$ x-frame-options              : chr "deny"
-##   ..$ x-xss-protection             : chr "1; mode=block"
-##   ..$ x-runtime-rack               : chr "0.043253"
-##   ..$ content-encoding             : chr "gzip"
-##   ..$ x-github-request-id          : chr "E223:0610:5A3284D:12574B8C:5A4BA4D7"
-##   ..- attr(*, "class")= chr [1:2] "insensitive" "list"
-##  - attr(*, ".send_headers")= Named chr [1:3] "application/vnd.github.v3+json" "https://github.com/r-lib/gh" "token 66452b382bd7eb10455de69660631e54ee80a109"
-##   ..- attr(*, "names")= chr [1:3] "Accept" "User-Agent" "Authorization"
-##  - attr(*, "class")= chr [1:2] "gh_response" "list"
+## # A tibble: 12 x 2
+##    label_name    label_url                                                
+##    <chr>         <chr>                                                    
+##  1 bug           https://api.github.com/repos/tidyverse/dplyr/labels/bug  
+##  2 data frame    https://api.github.com/repos/tidyverse/dplyr/labels/data…
+##  3 database      https://api.github.com/repos/tidyverse/dplyr/labels/data…
+##  4 docs          https://api.github.com/repos/tidyverse/dplyr/labels/docs 
+##  5 documentation https://api.github.com/repos/tidyverse/dplyr/labels/docu…
+##  6 feature       https://api.github.com/repos/tidyverse/dplyr/labels/feat…
+##  7 generic       https://api.github.com/repos/tidyverse/dplyr/labels/gene…
+##  8 nse           https://api.github.com/repos/tidyverse/dplyr/labels/nse  
+##  9 performance   https://api.github.com/repos/tidyverse/dplyr/labels/perf…
+## 10 reprex        https://api.github.com/repos/tidyverse/dplyr/labels/repr…
+## 11 vector        https://api.github.com/repos/tidyverse/dplyr/labels/vect…
+## 12 wip           https://api.github.com/repos/tidyverse/dplyr/labels/wip
 ```
 
 
