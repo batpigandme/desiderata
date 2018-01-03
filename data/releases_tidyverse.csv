@@ -1,0 +1,122 @@
+repo_name,release_name,date,url,html_url
+ggplot2,ggplot2 2.2.1,2016-12-30,https://api.github.com/repos/tidyverse/ggplot2/releases/5041577,https://github.com/tidyverse/ggplot2/releases/tag/v2.2.1
+ggplot2,ggplot2 2.2.0,2016-11-09,https://api.github.com/repos/tidyverse/ggplot2/releases/4653956,https://github.com/tidyverse/ggplot2/releases/tag/v2.2.0
+ggplot2,ggplot2 2.1.0,2016-02-29,https://api.github.com/repos/tidyverse/ggplot2/releases/2719495,https://github.com/tidyverse/ggplot2/releases/tag/v2.1.0
+ggplot2,ggplot2 2.0.0,2015-12-17,https://api.github.com/repos/tidyverse/ggplot2/releases/2313554,https://github.com/tidyverse/ggplot2/releases/tag/v2.0.0
+ggplot2,ggplot2 1.0.1,2015-03-30,https://api.github.com/repos/tidyverse/ggplot2/releases/1107322,https://github.com/tidyverse/ggplot2/releases/tag/v1.0.1
+ggplot2,ggplot2 1.0.0,2014-06-18,https://api.github.com/repos/tidyverse/ggplot2/releases/838906,https://github.com/tidyverse/ggplot2/releases/tag/v1.0.0
+lubridate,Lubridate 1.7.1,2017-11-02,https://api.github.com/repos/tidyverse/lubridate/releases/8374232,https://github.com/tidyverse/lubridate/releases/tag/v1.7.1
+lubridate,Lubridate 1.7.0,2017-10-30,https://api.github.com/repos/tidyverse/lubridate/releases/8307533,https://github.com/tidyverse/lubridate/releases/tag/v1.7.0
+lubridate,Lubridate 1.6.0,2016-09-12,https://api.github.com/repos/tidyverse/lubridate/releases/4106563,https://github.com/tidyverse/lubridate/releases/tag/v1.6.0
+lubridate,Lubridate 1.5.6,2016-04-05,https://api.github.com/repos/tidyverse/lubridate/releases/2958083,https://github.com/tidyverse/lubridate/releases/tag/v1.5.6
+lubridate,Lubridate 1.5.0,2015-12-02,https://api.github.com/repos/tidyverse/lubridate/releases/2226642,https://github.com/tidyverse/lubridate/releases/tag/v1.5.0
+lubridate,Lubridate 1.4.0,2014-12-14,https://api.github.com/repos/tidyverse/lubridate/releases/2226630,https://github.com/tidyverse/lubridate/releases/tag/v1.4.0
+stringr,stringr 1.2.0,2017-02-17,https://api.github.com/repos/tidyverse/stringr/releases/5512313,https://github.com/tidyverse/stringr/releases/tag/v1.2.0
+stringr,stringr 1.1.0,2016-08-19,https://api.github.com/repos/tidyverse/stringr/releases/3930452,https://github.com/tidyverse/stringr/releases/tag/v1.1.0
+stringr,stringr 1.0.0,2015-04-29,https://api.github.com/repos/tidyverse/stringr/releases/1238890,https://github.com/tidyverse/stringr/releases/tag/v1.0.0
+dplyr,dplyr 0.7.4,2017-09-16,https://api.github.com/repos/tidyverse/dplyr/releases/7942119,https://github.com/tidyverse/dplyr/releases/tag/v0.7.4
+dplyr,dplyr 0.7.3,2017-09-06,https://api.github.com/repos/tidyverse/dplyr/releases/7729138,https://github.com/tidyverse/dplyr/releases/tag/v0.7.3
+dplyr,dplyr 0.7.2,2017-07-19,https://api.github.com/repos/tidyverse/dplyr/releases/7207083,https://github.com/tidyverse/dplyr/releases/tag/v0.7.2
+dplyr,dplyr 0.7.1,2017-06-22,https://api.github.com/repos/tidyverse/dplyr/releases/6802547,https://github.com/tidyverse/dplyr/releases/tag/v0.7.1
+dplyr,dplyr 0.7.0,2017-06-08,https://api.github.com/repos/tidyverse/dplyr/releases/6696516,https://github.com/tidyverse/dplyr/releases/tag/v0.7.0
+dplyr,dplyr 0.6.0 release candidate,2017-04-12,https://api.github.com/repos/tidyverse/dplyr/releases/6062396,https://github.com/tidyverse/dplyr/releases/tag/v0.6.0-rc
+dplyr,dplyr 0.5.0,2016-06-23,https://api.github.com/repos/tidyverse/dplyr/releases/3518221,https://github.com/tidyverse/dplyr/releases/tag/v0.5.0
+dplyr,dplyr 0.4.3,2015-08-31,https://api.github.com/repos/tidyverse/dplyr/releases/1751858,https://github.com/tidyverse/dplyr/releases/tag/v0.4.3
+dplyr,dplyr 0.4.2,2015-06-15,https://api.github.com/repos/tidyverse/dplyr/releases/1421616,https://github.com/tidyverse/dplyr/releases/tag/v0.4.2
+dplyr,dplyr 0.4.1,2015-01-13,https://api.github.com/repos/tidyverse/dplyr/releases/850780,https://github.com/tidyverse/dplyr/releases/tag/v0.4.1
+dplyr,dplyr 0.4.0,2015-01-09,https://api.github.com/repos/tidyverse/dplyr/releases/837574,https://github.com/tidyverse/dplyr/releases/tag/v0.4.0
+dplyr,dplyr 0.3.0.1,2014-10-08,https://api.github.com/repos/tidyverse/dplyr/releases/611734,https://github.com/tidyverse/dplyr/releases/tag/v0.3.0.1
+dplyr,dplyr 0.3,2014-10-03,https://api.github.com/repos/tidyverse/dplyr/releases/606401,https://github.com/tidyverse/dplyr/releases/tag/v0.3
+dplyr,dplyr 0.2,2014-05-20,https://api.github.com/repos/tidyverse/dplyr/releases/332426,https://github.com/tidyverse/dplyr/releases/tag/v0.2.0
+dplyr,dplyr 0.1.3,2014-03-14,https://api.github.com/repos/tidyverse/dplyr/releases/225953,https://github.com/tidyverse/dplyr/releases/tag/v0.1.3
+dplyr,dplyr 0.1.2,2014-02-24,https://api.github.com/repos/tidyverse/dplyr/releases/198020,https://github.com/tidyverse/dplyr/releases/tag/v0.1.2
+dplyr,dplyr 0.1.1,2014-01-30,https://api.github.com/repos/tidyverse/dplyr/releases/165960,https://github.com/tidyverse/dplyr/releases/tag/v0.1.1
+dplyr,First release,2014-01-17,https://api.github.com/repos/tidyverse/dplyr/releases/151712,https://github.com/tidyverse/dplyr/releases/tag/v0.1
+readr,readr 1.1.1,2017-05-16,https://api.github.com/repos/tidyverse/readr/releases/6406617,https://github.com/tidyverse/readr/releases/tag/v1.1.1
+readr,readr 1.1.0,2017-03-20,https://api.github.com/repos/tidyverse/readr/releases/5956967,https://github.com/tidyverse/readr/releases/tag/v1.1.0
+readr,readr 1.0.0,2016-08-03,https://api.github.com/repos/tidyverse/readr/releases/3804351,https://github.com/tidyverse/readr/releases/tag/v1.0.0
+readr,readr 0.2.2,2015-10-21,https://api.github.com/repos/tidyverse/readr/releases/2002161,https://github.com/tidyverse/readr/releases/tag/v0.2.2
+readr,readr 0.2.1,2015-10-20,https://api.github.com/repos/tidyverse/readr/releases/1995044,https://github.com/tidyverse/readr/releases/tag/v0.2.1
+readr,readr 0.2.0,2015-10-19,https://api.github.com/repos/tidyverse/readr/releases/1985404,https://github.com/tidyverse/readr/releases/tag/v0.2.0
+readr,readr 0.1.0,2015-04-09,https://api.github.com/repos/tidyverse/readr/releases/1144157,https://github.com/tidyverse/readr/releases/tag/v0.1.0
+magrittr,CRAN version 1.5,2014-11-22,https://api.github.com/repos/tidyverse/magrittr/releases/726096,https://github.com/tidyverse/magrittr/releases/tag/v.1.5
+tidyr,tidyr 0.7.2,2017-10-16,https://api.github.com/repos/tidyverse/tidyr/releases/8150112,https://github.com/tidyverse/tidyr/releases/tag/v0.7.2
+tidyr,tidyr 0.7.1,2017-08-24,https://api.github.com/repos/tidyverse/tidyr/releases/7717845,https://github.com/tidyverse/tidyr/releases/tag/v0.7.1
+tidyr,tidyr 0.7.0,2017-08-14,https://api.github.com/repos/tidyverse/tidyr/releases/7411776,https://github.com/tidyverse/tidyr/releases/tag/v0.7.0
+tidyr,tidyr 0.6.3,2017-05-15,https://api.github.com/repos/tidyverse/tidyr/releases/6443391,https://github.com/tidyverse/tidyr/releases/tag/0.6.3
+tidyr,tidyr 0.6.2,2017-05-03,https://api.github.com/repos/tidyverse/tidyr/releases/6292827,https://github.com/tidyverse/tidyr/releases/tag/v0.6.2
+tidyr,tidyr 0.6.1,2017-01-09,https://api.github.com/repos/tidyverse/tidyr/releases/5208154,https://github.com/tidyverse/tidyr/releases/tag/v0.6.1
+tidyr,tidyr 0.6.0,2016-08-11,https://api.github.com/repos/tidyverse/tidyr/releases/3874672,https://github.com/tidyverse/tidyr/releases/tag/v0.6.0
+tidyr,tidyr 0.5.1,2016-06-14,https://api.github.com/repos/tidyverse/tidyr/releases/3440069,https://github.com/tidyverse/tidyr/releases/tag/v0.5.1
+tidyr,tidyr 0.5.0,2016-06-13,https://api.github.com/repos/tidyverse/tidyr/releases/3432177,https://github.com/tidyverse/tidyr/releases/tag/v0.5.0
+tidyr,tidyr 0.4.1,2016-02-05,https://api.github.com/repos/tidyverse/tidyr/releases/2563000,https://github.com/tidyverse/tidyr/releases/tag/v0.4.1
+tidyr,tidyr 0.4.0,2016-01-18,https://api.github.com/repos/tidyverse/tidyr/releases/2453533,https://github.com/tidyverse/tidyr/releases/tag/v0.4.0
+tidyr,tidyr 0.3.1,2015-09-09,https://api.github.com/repos/tidyverse/tidyr/releases/1793313,https://github.com/tidyverse/tidyr/releases/tag/v0.3.1
+tidyr,tidyr 0.3.0,2015-09-07,https://api.github.com/repos/tidyverse/tidyr/releases/1781725,https://github.com/tidyverse/tidyr/releases/tag/v0.3.0
+tidyr,tidyr 0.2.0,2014-12-05,https://api.github.com/repos/tidyverse/tidyr/releases/759447,https://github.com/tidyverse/tidyr/releases/tag/v0.2.0
+tidyr,Initial release,2014-07-21,https://api.github.com/repos/tidyverse/tidyr/releases/443970,https://github.com/tidyverse/tidyr/releases/tag/v0.1
+broom,Version 0.4.0: Many new tidiers; fixed issues in ANOVA and lme4,2015-11-30,https://api.github.com/repos/tidyverse/broom/releases/2208781,https://github.com/tidyverse/broom/releases/tag/v0.4.0
+broom,"Version 0.3.7 Tidiers for biglm, coeftest, plm, power.htest, lme, and more",2015-05-06,https://api.github.com/repos/tidyverse/broom/releases/1264934,https://github.com/tidyverse/broom/releases/tag/v0.3.7
+broom,"Version 0.3.6 Tidying for matrices, aovlist, and glance for aov",2015-02-18,https://api.github.com/repos/tidyverse/broom/releases/965490,https://github.com/tidyverse/broom/releases/tag/v0.3.6
+broom,"Version 0.3.5: rlm and gam tidiers, fixed bugs in felm and cv.glmnet",2015-01-05,https://api.github.com/repos/tidyverse/broom/releases/825752,https://github.com/tidyverse/broom/releases/tag/v0.3.5
+broom,Version 0.3.4: NA-handling in augment; rowwise tidying,2014-11-24,https://api.github.com/repos/tidyverse/broom/releases/727693,https://github.com/tidyverse/broom/releases/tag/v0.3.4
+broom,"Version 0.3: tidiers for lme4, glmnet, survival, and more",2014-10-19,https://api.github.com/repos/tidyverse/broom/releases/637488,https://github.com/tidyverse/broom/releases/tag/v0.3
+broom,Version 0.2: augment and glance,2014-09-16,https://api.github.com/repos/tidyverse/broom/releases/562111,https://github.com/tidyverse/broom/releases/tag/v0.2
+broom,First release,2014-09-11,https://api.github.com/repos/tidyverse/broom/releases/553396,https://github.com/tidyverse/broom/releases/tag/v0.1
+purrr,purrr 0.2.4,2017-10-17,https://api.github.com/repos/tidyverse/purrr/releases/8179398,https://github.com/tidyverse/purrr/releases/tag/v0.2.4
+purrr,purrr 0.2.3,2017-08-02,https://api.github.com/repos/tidyverse/purrr/releases/7266350,https://github.com/tidyverse/purrr/releases/tag/v0.2.3
+purrr,purrr 0.2.2,2016-06-17,https://api.github.com/repos/tidyverse/purrr/releases/3473749,https://github.com/tidyverse/purrr/releases/tag/v0.2.2
+purrr,purrr 0.2.1,2016-02-12,https://api.github.com/repos/tidyverse/purrr/releases/2612444,https://github.com/tidyverse/purrr/releases/tag/v0.2.1
+purrr,purrr 0.2.0,2015-12-29,https://api.github.com/repos/tidyverse/purrr/releases/2371074,https://github.com/tidyverse/purrr/releases/tag/v0.2.0
+purrr,First release,2015-09-28,https://api.github.com/repos/tidyverse/purrr/releases/1877871,https://github.com/tidyverse/purrr/releases/tag/v0.1.0
+haven,haven 1.1.0,2017-07-08,https://api.github.com/repos/tidyverse/haven/releases/6986261,https://github.com/tidyverse/haven/releases/tag/v1.1.0
+haven,haven 1.0.0,2016-09-23,https://api.github.com/repos/tidyverse/haven/releases/4218348,https://github.com/tidyverse/haven/releases/tag/v1.0.0
+haven,haven 0.2.1,2016-07-19,https://api.github.com/repos/tidyverse/haven/releases/3690237,https://github.com/tidyverse/haven/releases/tag/v0.2.1
+haven,Haven 0.2.0,2015-04-08,https://api.github.com/repos/tidyverse/haven/releases/1144147,https://github.com/tidyverse/haven/releases/tag/v0.2.0
+haven,haven 0.1.1,2015-03-03,https://api.github.com/repos/tidyverse/haven/releases/1007246,https://github.com/tidyverse/haven/releases/tag/v0.1.1
+haven,haven 0.1.0,2015-02-28,https://api.github.com/repos/tidyverse/haven/releases/1002422,https://github.com/tidyverse/haven/releases/tag/v0.1.0
+readxl,readxl 1.0.0,2017-04-18,https://api.github.com/repos/tidyverse/readxl/releases/6111450,https://github.com/tidyverse/readxl/releases/tag/v1.0.0
+readxl,readxl 0.1.1,2016-03-28,https://api.github.com/repos/tidyverse/readxl/releases/2902695,https://github.com/tidyverse/readxl/releases/tag/v0.1.1
+readxl,Initial release,2015-04-14,https://api.github.com/repos/tidyverse/readxl/releases/1165038,https://github.com/tidyverse/readxl/releases/tag/v0.1.0
+reprex,,2017-01-12,https://api.github.com/repos/tidyverse/reprex/releases/5148205,https://github.com/tidyverse/reprex/releases/tag/v0.1.1
+reprex,,2017-01-09,https://api.github.com/repos/tidyverse/reprex/releases/5119609,https://github.com/tidyverse/reprex/releases/tag/v0.1.0
+tibble,tibble 1.4.1,2017-12-28,https://api.github.com/repos/tidyverse/tibble/releases/9054267,https://github.com/tidyverse/tibble/releases/tag/v1.4.1
+tibble,v1.3.3,2017-05-29,https://api.github.com/repos/tidyverse/tibble/releases/6533579,https://github.com/tidyverse/tibble/releases/tag/v1.3.3
+tibble,v1.3.1,2017-05-17,https://api.github.com/repos/tidyverse/tibble/releases/6413256,https://github.com/tidyverse/tibble/releases/tag/v1.3.1
+tibble,v1.3.0,2017-04-01,https://api.github.com/repos/tidyverse/tibble/releases/5948176,https://github.com/tidyverse/tibble/releases/tag/v1.3.0
+tibble,v1.2,2016-08-26,https://api.github.com/repos/tidyverse/tibble/releases/3987593,https://github.com/tidyverse/tibble/releases/tag/v1.2
+tibble,v1.1,2016-07-04,https://api.github.com/repos/tidyverse/tibble/releases/3578511,https://github.com/tidyverse/tibble/releases/tag/v1.1
+tibble,v1.0,2016-03-22,https://api.github.com/repos/tidyverse/tibble/releases/2867924,https://github.com/tidyverse/tibble/releases/tag/v1.0
+tibble,v0.4,2016-03-21,https://api.github.com/repos/tidyverse/tibble/releases/2858508,https://github.com/tidyverse/tibble/releases/tag/v0.4
+tibble,v0.3,2016-03-10,https://api.github.com/repos/tidyverse/tibble/releases/2788154,https://github.com/tidyverse/tibble/releases/tag/v0.3
+tibble,v0.2,2016-03-02,https://api.github.com/repos/tidyverse/tibble/releases/2726913,https://github.com/tidyverse/tibble/releases/tag/v0.2
+tibble,v0.1,2015-12-09,https://api.github.com/repos/tidyverse/tibble/releases/2257782,https://github.com/tidyverse/tibble/releases/tag/v0.1
+hms,hms 0.4.0,2017-11-23,https://api.github.com/repos/tidyverse/hms/releases/8636736,https://github.com/tidyverse/hms/releases/tag/v0.4.0
+hms,v0.3,2016-11-23,https://api.github.com/repos/tidyverse/hms/releases/4738273,https://github.com/tidyverse/hms/releases/tag/v0.3
+hms,v0.2,2016-06-18,https://api.github.com/repos/tidyverse/hms/releases/3473318,https://github.com/tidyverse/hms/releases/tag/v0.2
+hms,v0.1,2016-05-02,https://api.github.com/repos/tidyverse/hms/releases/3142976,https://github.com/tidyverse/hms/releases/tag/v0.1
+modelr,modelr 0.1.1,2017-07-22,https://api.github.com/repos/tidyverse/modelr/releases/7208966,https://github.com/tidyverse/modelr/releases/tag/v0.1.1
+forcats,forcats 0.2.0,2017-01-19,https://api.github.com/repos/tidyverse/forcats/releases/5286484,https://github.com/tidyverse/forcats/releases/tag/v0.2.0
+forcats,forcats 0.1.1,2016-09-16,https://api.github.com/repos/tidyverse/forcats/releases/4153556,https://github.com/tidyverse/forcats/releases/tag/v0.1.1
+forcats,Initial release,2016-08-29,https://api.github.com/repos/tidyverse/forcats/releases/4002742,https://github.com/tidyverse/forcats/releases/tag/v0.1.0
+tidyverse,tidyverse 1.2.1,2017-11-13,https://api.github.com/repos/tidyverse/tidyverse/releases/8515358,https://github.com/tidyverse/tidyverse/releases/tag/v1.2.1
+tidyverse,tidyverse 1.2.0,2017-11-07,https://api.github.com/repos/tidyverse/tidyverse/releases/8424204,https://github.com/tidyverse/tidyverse/releases/tag/v1.2.0
+tidyverse,tidyverse 1.1.1,2017-01-27,https://api.github.com/repos/tidyverse/tidyverse/releases/5288286,https://github.com/tidyverse/tidyverse/releases/tag/v1.1.1
+tidyverse,tidyverse 1.1.0,2017-01-19,https://api.github.com/repos/tidyverse/tidyverse/releases/5219032,https://github.com/tidyverse/tidyverse/releases/tag/v1.1.0
+tidyverse,Tidyverse 1.0.0,2016-09-09,https://api.github.com/repos/tidyverse/tidyverse/releases/4142828,https://github.com/tidyverse/tidyverse/releases/tag/v1.0.0
+blob,Initial release,2016-12-28,https://api.github.com/repos/tidyverse/blob/releases/5033241,https://github.com/tidyverse/blob/releases/tag/v1.0.0
+rlang,Release 0.1.6,2017-12-21,https://api.github.com/repos/tidyverse/rlang/releases/9032420,https://github.com/tidyverse/rlang/releases/tag/v0.1.6
+rlang,rlang 0.1.4,2017-11-06,https://api.github.com/repos/tidyverse/rlang/releases/8398417,https://github.com/tidyverse/rlang/releases/tag/v0.1.4
+rlang,rlang 0.1.2,2017-08-09,https://api.github.com/repos/tidyverse/rlang/releases/7357946,https://github.com/tidyverse/rlang/releases/tag/v0.1.2
+rlang,rlang 0.1.0,2017-05-06,https://api.github.com/repos/tidyverse/rlang/releases/6426471,https://github.com/tidyverse/rlang/releases/tag/v0.1.0
+rlang,rlang 0.1.1,2017-05-17,https://api.github.com/repos/tidyverse/rlang/releases/6308374,https://github.com/tidyverse/rlang/releases/tag/v0.1.1
+glue,glue 1.2.0,2017-10-29,https://api.github.com/repos/tidyverse/glue/releases/8316003,https://github.com/tidyverse/glue/releases/tag/v1.2.0
+glue,glue 1.1.1,2017-06-16,https://api.github.com/repos/tidyverse/glue/releases/6816921,https://github.com/tidyverse/glue/releases/tag/v1.1.1
+glue,glue v1.1.0,2017-06-13,https://api.github.com/repos/tidyverse/glue/releases/6702215,https://github.com/tidyverse/glue/releases/tag/v1.1.0
+dbplyr,dbplyr 1.1.0,2017-06-27,https://api.github.com/repos/tidyverse/dbplyr/releases/6850131,https://github.com/tidyverse/dbplyr/releases/tag/v1.1.0
+dbplyr,dbplyr 1.0.0,2017-06-13,https://api.github.com/repos/tidyverse/dbplyr/releases/6699982,https://github.com/tidyverse/dbplyr/releases/tag/v1.0.0
+googledrive,v0.1.1,2017-08-27,https://api.github.com/repos/tidyverse/googledrive/releases/7549998,https://github.com/tidyverse/googledrive/releases/tag/v0.1.1
+tidyselect,tidyselect 0.2.3,2017-11-06,https://api.github.com/repos/tidyverse/tidyselect/releases/8412847,https://github.com/tidyverse/tidyselect/releases/tag/v0.2.3
+tidyselect,tidyselect 0.2.2,2017-10-10,https://api.github.com/repos/tidyverse/tidyselect/releases/8373230,https://github.com/tidyverse/tidyselect/releases/tag/v0.2.2
+tidyselect,tidyselect 0.2.0,2017-08-30,https://api.github.com/repos/tidyverse/tidyselect/releases/7623227,https://github.com/tidyverse/tidyselect/releases/tag/v0.2.0
+tidyselect,Initial CRAN release 0.1.1,2017-07-24,https://api.github.com/repos/tidyverse/tidyselect/releases/7143007,https://github.com/tidyverse/tidyselect/releases/tag/v0.1.1

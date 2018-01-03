@@ -1,0 +1,219 @@
+repo_name,label_name,url
+ggplot2,bug,https://api.github.com/repos/tidyverse/ggplot2/labels/bug
+ggplot2,coord,https://api.github.com/repos/tidyverse/ggplot2/labels/coord
+ggplot2,docs,https://api.github.com/repos/tidyverse/ggplot2/labels/docs
+ggplot2,facets,https://api.github.com/repos/tidyverse/ggplot2/labels/facets
+ggplot2,feature,https://api.github.com/repos/tidyverse/ggplot2/labels/feature
+ggplot2,in progress,https://api.github.com/repos/tidyverse/ggplot2/labels/in%20progress
+ggplot2,internals,https://api.github.com/repos/tidyverse/ggplot2/labels/internals
+ggplot2,layers,https://api.github.com/repos/tidyverse/ggplot2/labels/layers
+ggplot2,ready,https://api.github.com/repos/tidyverse/ggplot2/labels/ready
+ggplot2,reprex,https://api.github.com/repos/tidyverse/ggplot2/labels/reprex
+ggplot2,scales,https://api.github.com/repos/tidyverse/ggplot2/labels/scales
+ggplot2,themes,https://api.github.com/repos/tidyverse/ggplot2/labels/themes
+ggplot2,wip,https://api.github.com/repos/tidyverse/ggplot2/labels/wip
+lubridate,bug,https://api.github.com/repos/tidyverse/lubridate/labels/bug
+lubridate,documentation,https://api.github.com/repos/tidyverse/lubridate/labels/documentation
+lubridate,duplicate,https://api.github.com/repos/tidyverse/lubridate/labels/duplicate
+lubridate,enhancement,https://api.github.com/repos/tidyverse/lubridate/labels/enhancement
+lubridate,feature request,https://api.github.com/repos/tidyverse/lubridate/labels/feature%20request
+lubridate,invalid,https://api.github.com/repos/tidyverse/lubridate/labels/invalid
+lubridate,low hanging fruit,https://api.github.com/repos/tidyverse/lubridate/labels/low%20hanging%20fruit
+lubridate,question,https://api.github.com/repos/tidyverse/lubridate/labels/question
+lubridate,wontfix,https://api.github.com/repos/tidyverse/lubridate/labels/wontfix
+stringr,bug,https://api.github.com/repos/tidyverse/stringr/labels/bug
+stringr,docs,https://api.github.com/repos/tidyverse/stringr/labels/docs
+stringr,feature,https://api.github.com/repos/tidyverse/stringr/labels/feature
+stringr,reprex,https://api.github.com/repos/tidyverse/stringr/labels/reprex
+stringr,wip,https://api.github.com/repos/tidyverse/stringr/labels/wip
+dplyr,bug,https://api.github.com/repos/tidyverse/dplyr/labels/bug
+dplyr,data frame,https://api.github.com/repos/tidyverse/dplyr/labels/data%20frame
+dplyr,database,https://api.github.com/repos/tidyverse/dplyr/labels/database
+dplyr,docs,https://api.github.com/repos/tidyverse/dplyr/labels/docs
+dplyr,documentation,https://api.github.com/repos/tidyverse/dplyr/labels/documentation
+dplyr,feature,https://api.github.com/repos/tidyverse/dplyr/labels/feature
+dplyr,generic,https://api.github.com/repos/tidyverse/dplyr/labels/generic
+dplyr,nse,https://api.github.com/repos/tidyverse/dplyr/labels/nse
+dplyr,performance,https://api.github.com/repos/tidyverse/dplyr/labels/performance
+dplyr,reprex,https://api.github.com/repos/tidyverse/dplyr/labels/reprex
+dplyr,vector,https://api.github.com/repos/tidyverse/dplyr/labels/vector
+dplyr,wip,https://api.github.com/repos/tidyverse/dplyr/labels/wip
+readr,bug,https://api.github.com/repos/tidyverse/readr/labels/bug
+readr,collector,https://api.github.com/repos/tidyverse/readr/labels/collector
+readr,docs,https://api.github.com/repos/tidyverse/readr/labels/docs
+readr,feature,https://api.github.com/repos/tidyverse/readr/labels/feature
+readr,Multi-byte,https://api.github.com/repos/tidyverse/readr/labels/Multi-byte
+readr,read,https://api.github.com/repos/tidyverse/readr/labels/read
+readr,reprex,https://api.github.com/repos/tidyverse/readr/labels/reprex
+readr,wip,https://api.github.com/repos/tidyverse/readr/labels/wip
+readr,write,https://api.github.com/repos/tidyverse/readr/labels/write
+magrittr,bug,https://api.github.com/repos/tidyverse/magrittr/labels/bug
+magrittr,duplicate,https://api.github.com/repos/tidyverse/magrittr/labels/duplicate
+magrittr,enhancement,https://api.github.com/repos/tidyverse/magrittr/labels/enhancement
+magrittr,invalid,https://api.github.com/repos/tidyverse/magrittr/labels/invalid
+magrittr,question,https://api.github.com/repos/tidyverse/magrittr/labels/question
+magrittr,wontfix,https://api.github.com/repos/tidyverse/magrittr/labels/wontfix
+tidyr,bug,https://api.github.com/repos/tidyverse/tidyr/labels/bug
+tidyr,docs,https://api.github.com/repos/tidyverse/tidyr/labels/docs
+tidyr,feature,https://api.github.com/repos/tidyverse/tidyr/labels/feature
+tidyr,rectangles,https://api.github.com/repos/tidyverse/tidyr/labels/rectangles
+tidyr,reprex,https://api.github.com/repos/tidyverse/tidyr/labels/reprex
+tidyr,strings,https://api.github.com/repos/tidyverse/tidyr/labels/strings
+tidyr,trees,https://api.github.com/repos/tidyverse/tidyr/labels/trees
+tidyr,wip,https://api.github.com/repos/tidyverse/tidyr/labels/wip
+broom,bug,https://api.github.com/repos/tidyverse/broom/labels/bug
+broom,duplicate,https://api.github.com/repos/tidyverse/broom/labels/duplicate
+broom,enhancement,https://api.github.com/repos/tidyverse/broom/labels/enhancement
+broom,help wanted,https://api.github.com/repos/tidyverse/broom/labels/help%20wanted
+broom,invalid,https://api.github.com/repos/tidyverse/broom/labels/invalid
+broom,question,https://api.github.com/repos/tidyverse/broom/labels/question
+broom,wontfix,https://api.github.com/repos/tidyverse/broom/labels/wontfix
+purrr,bug,https://api.github.com/repos/tidyverse/purrr/labels/bug
+purrr,feature,https://api.github.com/repos/tidyverse/purrr/labels/feature
+purrr,reprex,https://api.github.com/repos/tidyverse/purrr/labels/reprex
+haven,bug,https://api.github.com/repos/tidyverse/haven/labels/bug
+haven,feature,https://api.github.com/repos/tidyverse/haven/labels/feature
+haven,readstat,https://api.github.com/repos/tidyverse/haven/labels/readstat
+haven,reprex,https://api.github.com/repos/tidyverse/haven/labels/reprex
+haven,semantics,https://api.github.com/repos/tidyverse/haven/labels/semantics
+readxl,bug,https://api.github.com/repos/tidyverse/readxl/labels/bug
+readxl,cells,https://api.github.com/repos/tidyverse/readxl/labels/cells
+readxl,col_names,https://api.github.com/repos/tidyverse/readxl/labels/col_names
+readxl,col_types,https://api.github.com/repos/tidyverse/readxl/labels/col_types
+readxl,datetime,https://api.github.com/repos/tidyverse/readxl/labels/datetime
+readxl,docs,https://api.github.com/repos/tidyverse/readxl/labels/docs
+readxl,feature,https://api.github.com/repos/tidyverse/readxl/labels/feature
+readxl,formats,https://api.github.com/repos/tidyverse/readxl/labels/formats
+readxl,future,https://api.github.com/repos/tidyverse/readxl/labels/future
+readxl,problems,https://api.github.com/repos/tidyverse/readxl/labels/problems
+readxl,reprex,https://api.github.com/repos/tidyverse/readxl/labels/reprex
+readxl,xls,https://api.github.com/repos/tidyverse/readxl/labels/xls
+readxl,xlsx,https://api.github.com/repos/tidyverse/readxl/labels/xlsx
+reprex,bug,https://api.github.com/repos/tidyverse/reprex/labels/bug
+reprex,duplicate,https://api.github.com/repos/tidyverse/reprex/labels/duplicate
+reprex,enhancement,https://api.github.com/repos/tidyverse/reprex/labels/enhancement
+reprex,help wanted,https://api.github.com/repos/tidyverse/reprex/labels/help%20wanted
+reprex,invalid,https://api.github.com/repos/tidyverse/reprex/labels/invalid
+reprex,question,https://api.github.com/repos/tidyverse/reprex/labels/question
+reprex,wontfix,https://api.github.com/repos/tidyverse/reprex/labels/wontfix
+tibble,bug,https://api.github.com/repos/tidyverse/tibble/labels/bug
+tibble,category:encoding,https://api.github.com/repos/tidyverse/tibble/labels/category:encoding
+tibble,category:interface,https://api.github.com/repos/tidyverse/tibble/labels/category:interface
+tibble,category:printing,https://api.github.com/repos/tidyverse/tibble/labels/category:printing
+tibble,category:test,https://api.github.com/repos/tidyverse/tibble/labels/category:test
+tibble,category:tribble,https://api.github.com/repos/tidyverse/tibble/labels/category:tribble
+tibble,duplicate,https://api.github.com/repos/tidyverse/tibble/labels/duplicate
+tibble,enhancement,https://api.github.com/repos/tidyverse/tibble/labels/enhancement
+tibble,help wanted,https://api.github.com/repos/tidyverse/tibble/labels/help%20wanted
+tibble,in progress,https://api.github.com/repos/tidyverse/tibble/labels/in%20progress
+tibble,invalid,https://api.github.com/repos/tidyverse/tibble/labels/invalid
+tibble,question,https://api.github.com/repos/tidyverse/tibble/labels/question
+tibble,ready,https://api.github.com/repos/tidyverse/tibble/labels/ready
+tibble,wontfix,https://api.github.com/repos/tidyverse/tibble/labels/wontfix
+hms,bug,https://api.github.com/repos/tidyverse/hms/labels/bug
+hms,duplicate,https://api.github.com/repos/tidyverse/hms/labels/duplicate
+hms,enhancement,https://api.github.com/repos/tidyverse/hms/labels/enhancement
+hms,help wanted,https://api.github.com/repos/tidyverse/hms/labels/help%20wanted
+hms,in progress,https://api.github.com/repos/tidyverse/hms/labels/in%20progress
+hms,invalid,https://api.github.com/repos/tidyverse/hms/labels/invalid
+hms,question,https://api.github.com/repos/tidyverse/hms/labels/question
+hms,wontfix,https://api.github.com/repos/tidyverse/hms/labels/wontfix
+modelr,bug,https://api.github.com/repos/tidyverse/modelr/labels/bug
+modelr,duplicate,https://api.github.com/repos/tidyverse/modelr/labels/duplicate
+modelr,enhancement,https://api.github.com/repos/tidyverse/modelr/labels/enhancement
+modelr,help wanted,https://api.github.com/repos/tidyverse/modelr/labels/help%20wanted
+modelr,invalid,https://api.github.com/repos/tidyverse/modelr/labels/invalid
+modelr,question,https://api.github.com/repos/tidyverse/modelr/labels/question
+modelr,wontfix,https://api.github.com/repos/tidyverse/modelr/labels/wontfix
+forcats,bug,https://api.github.com/repos/tidyverse/forcats/labels/bug
+forcats,duplicate,https://api.github.com/repos/tidyverse/forcats/labels/duplicate
+forcats,enhancement,https://api.github.com/repos/tidyverse/forcats/labels/enhancement
+forcats,help wanted,https://api.github.com/repos/tidyverse/forcats/labels/help%20wanted
+forcats,invalid,https://api.github.com/repos/tidyverse/forcats/labels/invalid
+forcats,question,https://api.github.com/repos/tidyverse/forcats/labels/question
+forcats,wontfix,https://api.github.com/repos/tidyverse/forcats/labels/wontfix
+tidyverse,bug,https://api.github.com/repos/tidyverse/tidyverse/labels/bug
+tidyverse,duplicate,https://api.github.com/repos/tidyverse/tidyverse/labels/duplicate
+tidyverse,enhancement,https://api.github.com/repos/tidyverse/tidyverse/labels/enhancement
+tidyverse,help wanted,https://api.github.com/repos/tidyverse/tidyverse/labels/help%20wanted
+tidyverse,invalid,https://api.github.com/repos/tidyverse/tidyverse/labels/invalid
+tidyverse,question,https://api.github.com/repos/tidyverse/tidyverse/labels/question
+tidyverse,wontfix,https://api.github.com/repos/tidyverse/tidyverse/labels/wontfix
+tidytemplate,bug,https://api.github.com/repos/tidyverse/tidytemplate/labels/bug
+tidytemplate,duplicate,https://api.github.com/repos/tidyverse/tidytemplate/labels/duplicate
+tidytemplate,enhancement,https://api.github.com/repos/tidyverse/tidytemplate/labels/enhancement
+tidytemplate,help wanted,https://api.github.com/repos/tidyverse/tidytemplate/labels/help%20wanted
+tidytemplate,invalid,https://api.github.com/repos/tidyverse/tidytemplate/labels/invalid
+tidytemplate,question,https://api.github.com/repos/tidyverse/tidytemplate/labels/question
+tidytemplate,wontfix,https://api.github.com/repos/tidyverse/tidytemplate/labels/wontfix
+blob,bug,https://api.github.com/repos/tidyverse/blob/labels/bug
+blob,duplicate,https://api.github.com/repos/tidyverse/blob/labels/duplicate
+blob,enhancement,https://api.github.com/repos/tidyverse/blob/labels/enhancement
+blob,help wanted,https://api.github.com/repos/tidyverse/blob/labels/help%20wanted
+blob,invalid,https://api.github.com/repos/tidyverse/blob/labels/invalid
+blob,question,https://api.github.com/repos/tidyverse/blob/labels/question
+blob,wontfix,https://api.github.com/repos/tidyverse/blob/labels/wontfix
+ggplot2-docs,bug,https://api.github.com/repos/tidyverse/ggplot2-docs/labels/bug
+ggplot2-docs,duplicate,https://api.github.com/repos/tidyverse/ggplot2-docs/labels/duplicate
+ggplot2-docs,enhancement,https://api.github.com/repos/tidyverse/ggplot2-docs/labels/enhancement
+ggplot2-docs,help wanted,https://api.github.com/repos/tidyverse/ggplot2-docs/labels/help%20wanted
+ggplot2-docs,invalid,https://api.github.com/repos/tidyverse/ggplot2-docs/labels/invalid
+ggplot2-docs,question,https://api.github.com/repos/tidyverse/ggplot2-docs/labels/question
+ggplot2-docs,wontfix,https://api.github.com/repos/tidyverse/ggplot2-docs/labels/wontfix
+rlang,bug,https://api.github.com/repos/tidyverse/rlang/labels/bug
+rlang,duplicate,https://api.github.com/repos/tidyverse/rlang/labels/duplicate
+rlang,enhancement,https://api.github.com/repos/tidyverse/rlang/labels/enhancement
+rlang,help wanted,https://api.github.com/repos/tidyverse/rlang/labels/help%20wanted
+rlang,invalid,https://api.github.com/repos/tidyverse/rlang/labels/invalid
+rlang,question,https://api.github.com/repos/tidyverse/rlang/labels/question
+rlang,tidyeval,https://api.github.com/repos/tidyverse/rlang/labels/tidyeval
+rlang,wontfix,https://api.github.com/repos/tidyverse/rlang/labels/wontfix
+glue,bug,https://api.github.com/repos/tidyverse/glue/labels/bug
+glue,duplicate,https://api.github.com/repos/tidyverse/glue/labels/duplicate
+glue,enhancement,https://api.github.com/repos/tidyverse/glue/labels/enhancement
+glue,help wanted,https://api.github.com/repos/tidyverse/glue/labels/help%20wanted
+glue,invalid,https://api.github.com/repos/tidyverse/glue/labels/invalid
+glue,question,https://api.github.com/repos/tidyverse/glue/labels/question
+glue,wontfix,https://api.github.com/repos/tidyverse/glue/labels/wontfix
+style,bug,https://api.github.com/repos/tidyverse/style/labels/bug
+style,duplicate,https://api.github.com/repos/tidyverse/style/labels/duplicate
+style,enhancement,https://api.github.com/repos/tidyverse/style/labels/enhancement
+style,help wanted,https://api.github.com/repos/tidyverse/style/labels/help%20wanted
+style,invalid,https://api.github.com/repos/tidyverse/style/labels/invalid
+style,question,https://api.github.com/repos/tidyverse/style/labels/question
+style,wontfix,https://api.github.com/repos/tidyverse/style/labels/wontfix
+dbplyr,bug,https://api.github.com/repos/tidyverse/dbplyr/labels/bug
+dbplyr,duplicate,https://api.github.com/repos/tidyverse/dbplyr/labels/duplicate
+dbplyr,enhancement,https://api.github.com/repos/tidyverse/dbplyr/labels/enhancement
+dbplyr,help wanted,https://api.github.com/repos/tidyverse/dbplyr/labels/help%20wanted
+dbplyr,invalid,https://api.github.com/repos/tidyverse/dbplyr/labels/invalid
+dbplyr,question,https://api.github.com/repos/tidyverse/dbplyr/labels/question
+dbplyr,wontfix,https://api.github.com/repos/tidyverse/dbplyr/labels/wontfix
+googledrive,bug,https://api.github.com/repos/tidyverse/googledrive/labels/bug
+googledrive,docs,https://api.github.com/repos/tidyverse/googledrive/labels/docs
+googledrive,feature,https://api.github.com/repos/tidyverse/googledrive/labels/feature
+googledrive,future,https://api.github.com/repos/tidyverse/googledrive/labels/future
+googledrive,question,https://api.github.com/repos/tidyverse/googledrive/labels/question
+googledrive,reprex,https://api.github.com/repos/tidyverse/googledrive/labels/reprex
+googledrive,sheets,https://api.github.com/repos/tidyverse/googledrive/labels/sheets
+googlesheets4,bug,https://api.github.com/repos/tidyverse/googlesheets4/labels/bug
+googlesheets4,duplicate,https://api.github.com/repos/tidyverse/googlesheets4/labels/duplicate
+googlesheets4,enhancement,https://api.github.com/repos/tidyverse/googlesheets4/labels/enhancement
+googlesheets4,help wanted,https://api.github.com/repos/tidyverse/googlesheets4/labels/help%20wanted
+googlesheets4,invalid,https://api.github.com/repos/tidyverse/googlesheets4/labels/invalid
+googlesheets4,question,https://api.github.com/repos/tidyverse/googlesheets4/labels/question
+googlesheets4,wontfix,https://api.github.com/repos/tidyverse/googlesheets4/labels/wontfix
+tidyselect,bug,https://api.github.com/repos/tidyverse/tidyselect/labels/bug
+tidyselect,duplicate,https://api.github.com/repos/tidyverse/tidyselect/labels/duplicate
+tidyselect,enhancement,https://api.github.com/repos/tidyverse/tidyselect/labels/enhancement
+tidyselect,help wanted,https://api.github.com/repos/tidyverse/tidyselect/labels/help%20wanted
+tidyselect,invalid,https://api.github.com/repos/tidyverse/tidyselect/labels/invalid
+tidyselect,question,https://api.github.com/repos/tidyverse/tidyselect/labels/question
+tidyselect,wontfix,https://api.github.com/repos/tidyverse/tidyselect/labels/wontfix
+tidyverse.org,bug,https://api.github.com/repos/tidyverse/tidyverse.org/labels/bug
+tidyverse.org,duplicate,https://api.github.com/repos/tidyverse/tidyverse.org/labels/duplicate
+tidyverse.org,enhancement,https://api.github.com/repos/tidyverse/tidyverse.org/labels/enhancement
+tidyverse.org,help wanted,https://api.github.com/repos/tidyverse/tidyverse.org/labels/help%20wanted
+tidyverse.org,invalid,https://api.github.com/repos/tidyverse/tidyverse.org/labels/invalid
+tidyverse.org,question,https://api.github.com/repos/tidyverse/tidyverse.org/labels/question
+tidyverse.org,wontfix,https://api.github.com/repos/tidyverse/tidyverse.org/labels/wontfix
