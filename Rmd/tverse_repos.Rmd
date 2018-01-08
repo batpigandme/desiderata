@@ -12,18 +12,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Locked and loaded.[^1]
 
-```{r}
+```{r libs}
 suppressPackageStartupMessages(library(tidyverse))
 library(gh)
 ```
 
 Where `repo` = repository name, `purrr::map()` to extract the elements `name` from list of repositories. `issue` = list column of issues for each repository (vectorize `gh()` using `~` formula syntax).
 
-```{r}
+```{r get_repos}
 repos <- gh("/orgs/tidyverse/repos", .limit = Inf)
 ```
 
-```{r}
+```{r reprex_by_repo}
 iss_df <-
   data_frame(
     repo = repos %>% map_chr("name"),
@@ -39,7 +39,7 @@ rep_iss <- flatten(iss_df$reprex_issues)
 keeps <- tibble(reprex_issue = keep(rep_iss,is.list))
 ```
 
-```{r}
+```{r issue_df}
 iss_df %>%
   mutate(n_open = issue %>% map_int(length)) %>%
   select(-issue) %>%
@@ -49,7 +49,7 @@ iss_df %>%
   print(n = nrow(.))
 ```
 
-```{r}
+```{r reprex_issue_df}
 iss_df %>%
   mutate(reprex_n = reprex_issues %>% map_int(length)) %>%
   select(-reprex_issues) %>%
@@ -59,12 +59,12 @@ iss_df %>%
   print(n = nrow(.))
 ```
 
-```{r}
+```{r ex_of_gh_label}
 # gh(endpoint = "/repos/tidyverse/ggplot2/issues/1904/labels")
 gh(endpoint = "https://api.github.com/repos/tidyverse/ggplot2/issues/2383/labels")
 ```
 
-```{r}
+```{r dplyr_labels}
 dplyr_labs <- gh(endpoint = "https://api.github.com/repos/tidyverse/dplyr/labels")
 
 labs_df <-  data_frame(

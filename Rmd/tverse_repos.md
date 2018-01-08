@@ -65,26 +65,26 @@ iss_df %>%
 ## # A tibble: 28 x 2
 ##    repo          n_open
 ##    <chr>          <int>
-##  1 dplyr            141
+##  1 dplyr            140
 ##  2 broom            129
-##  3 purrr             79
-##  4 rlang             78
+##  3 purrr             80
+##  4 rlang             79
 ##  5 readr             63
-##  6 tibble            52
-##  7 ggplot2           50
+##  6 ggplot2           53
+##  7 tibble            52
 ##  8 magrittr          48
-##  9 haven             39
-## 10 readxl            32
-## 11 modelr            31
-## 12 forcats           27
-## 13 lubridate         26
+##  9 readxl            32
+## 10 modelr            31
+## 11 forcats           27
+## 12 lubridate         26
+## 13 haven             21
 ## 14 googledrive       20
-## 15 tidyr             18
-## 16 reprex            17
-## 17 tidyverse.org     16
+## 15 tidyverse.org     19
+## 16 tidyr             16
+## 17 reprex            15
 ## 18 tidyverse         13
-## 19 style             13
-## 20 stringr           12
+## 19 stringr           12
+## 20 style              9
 ## 21 hms                8
 ## 22 glue               3
 ## 23 googlesheets4      2
@@ -111,15 +111,15 @@ iss_df %>%
 ##    repo          reprex_n
 ##    <chr>            <int>
 ##  1 dplyr                5
-##  2 ggplot2              1
-##  3 lubridate            1
-##  4 stringr              1
-##  5 readr                1
-##  6 magrittr             1
-##  7 tidyr                1
-##  8 broom                1
-##  9 purrr                1
-## 10 haven                1
+##  2 haven                4
+##  3 ggplot2              1
+##  4 lubridate            1
+##  5 stringr              1
+##  6 readr                1
+##  7 magrittr             1
+##  8 tidyr                1
+##  9 broom                1
+## 10 purrr                1
 ## 11 readxl               1
 ## 12 reprex               1
 ## 13 tibble               1
