@@ -39,10 +39,10 @@ str(iss_df, max.level = 1)
 ```
 
 ```
-## Classes 'tbl_df', 'tbl' and 'data.frame':	28 obs. of  3 variables:
+## Classes 'tbl_df', 'tbl' and 'data.frame':	27 obs. of  3 variables:
 ##  $ repo         : chr  "ggplot2" "lubridate" "stringr" "dplyr" ...
-##  $ issue        :List of 28
-##  $ reprex_issues:List of 28
+##  $ issue        :List of 27
+##  $ reprex_issues:List of 27
 ```
 
 ```r
@@ -62,37 +62,36 @@ iss_df %>%
 ```
 
 ```
-## # A tibble: 28 x 2
+## # A tibble: 27 x 2
 ##    repo          n_open
 ##    <chr>          <int>
-##  1 dplyr            152
-##  2 broom            132
-##  3 rlang             81
-##  4 purrr             80
-##  5 ggplot2           69
-##  6 readr             65
-##  7 magrittr          49
-##  8 tibble            38
-##  9 readxl            35
-## 10 lubridate         31
-## 11 modelr            31
-## 12 forcats           29
-## 13 googledrive       22
-## 14 reprex            20
-## 15 tidyverse.org     20
-## 16 tidyverse         19
-## 17 tidyr             18
-## 18 haven             16
-## 19 stringr           15
-## 20 hms                7
-## 21 style              7
+##  1 dplyr            165
+##  2 broom            137
+##  3 ggplot2           80
+##  4 readr             74
+##  5 purrr             57
+##  6 magrittr          50
+##  7 readxl            37
+##  8 tibble            35
+##  9 modelr            32
+## 10 tidyr             27
+## 11 lubridate         26
+## 12 googledrive       25
+## 13 stringr           23
+## 14 haven             20
+## 15 tidyverse.org     18
+## 16 reprex            15
+## 17 tidyverse         15
+## 18 forcats           10
+## 19 style             10
+## 20 hms                9
+## 21 glue               7
 ## 22 tidyselect         5
-## 23 glue               3
+## 23 dbplyr             3
 ## 24 blob               2
 ## 25 googlesheets4      2
 ## 26 tidytemplate       1
 ## 27 ggplot2-docs       1
-## 28 dbplyr             1
 ```
 
 
@@ -107,19 +106,19 @@ iss_df %>%
 ```
 
 ```
-## # A tibble: 28 x 2
+## # A tibble: 27 x 2
 ##    repo          reprex_n
 ##    <chr>            <int>
-##  1 dplyr                3
-##  2 haven                3
-##  3 ggplot2              1
-##  4 lubridate            1
-##  5 stringr              1
-##  6 readr                1
-##  7 magrittr             1
-##  8 tidyr                1
-##  9 broom                1
-## 10 purrr                1
+##  1 dplyr                2
+##  2 readr                2
+##  3 purrr                2
+##  4 haven                2
+##  5 ggplot2              1
+##  6 lubridate            1
+##  7 stringr              1
+##  8 magrittr             1
+##  9 tidyr                1
+## 10 broom                1
 ## 11 readxl               1
 ## 12 reprex               1
 ## 13 tibble               1
@@ -130,14 +129,13 @@ iss_df %>%
 ## 18 tidytemplate         1
 ## 19 blob                 1
 ## 20 ggplot2-docs         1
-## 21 rlang                1
-## 22 glue                 1
-## 23 style                1
-## 24 dbplyr               1
-## 25 googledrive          1
-## 26 googlesheets4        1
-## 27 tidyselect           1
-## 28 tidyverse.org        1
+## 21 glue                 1
+## 22 style                1
+## 23 dbplyr               1
+## 24 googledrive          1
+## 25 googlesheets4        1
+## 26 tidyselect           1
+## 27 tidyverse.org        1
 ```
 
 
