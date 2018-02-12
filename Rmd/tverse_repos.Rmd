@@ -19,11 +19,11 @@ library(gh)
 
 Where `repo` = repository name, `purrr::map()` to extract the elements `name` from list of repositories. `issue` = list column of issues for each repository (vectorize `gh()` using `~` formula syntax).
 
-```{r get_repos}
+```{r get_tv_repos}
 repos <- gh("/orgs/tidyverse/repos", .limit = Inf)
 ```
 
-```{r reprex_by_repo}
+```{r reprex_by_tv_repo}
 iss_df <-
   data_frame(
     repo = repos %>% map_chr("name"),
