@@ -1,0 +1,74 @@
+---
+title: "r-lib repos"
+output:
+  html_document:
+    keep_md: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Locked and loaded.[^1]
+
+```{r libs}
+suppressPackageStartupMessages(library(tidyverse))
+library(gh)
+```
+
+Where `repo` = repository name, `purrr::map()` to extract the elements `name` from list of repositories. `issue` = list column of issues for each repository (vectorize `gh()` using `~` formula syntax).
+
+```{r get_rlib_repos}
+repos <- gh("/orgs/r-lib/repos", .limit = Inf)
+```
+
+```{r rlib_repo_issues}
+iss_df <-
+  data_frame(
+    repo = repos %>% map_chr("name"),
+    issue = repo %>%
+      map(~ gh(repo = .x, endpoint = "/repos/r-lib/:repo/issues",
+               .limit = Inf)),
+    reprex_issues = repo %>%
+      map(~ gh(repo = .x, endpoint = "/repos/r-lib/:repo/issues", 
+               labels = "reprex", .limit = Inf))
+    )
+str(iss_df, max.level = 1)
+rep_iss <- flatten(iss_df$reprex_issues)
+keeps <- tibble(reprex_issue = keep(rep_iss,is.list))
+```
+
+```{r issue_df}
+iss_df %>%
+  mutate(n_open = issue %>% map_int(length)) %>%
+  select(-issue) %>%
+  select(-reprex_issues) %>%
+  filter(n_open > 0) %>%
+  arrange(desc(n_open)) %>%
+  print(n = nrow(.))
+```
+
+```{r reprex_issue_df}
+iss_df %>%
+  mutate(reprex_n = reprex_issues %>% map_int(length)) %>%
+  select(-reprex_issues) %>%
+  select(-issue) %>%
+  filter(reprex_n > 0) %>%
+  arrange(desc(reprex_n)) %>%
+  print(n = nrow(.))
+```
+
+
+```{r dplyr_labels}
+usethis_labs <- gh(endpoint = "https://api.github.com/repos/r-lib/usethis/labels")
+
+labs_df <-  data_frame(
+    label_name = usethis_labs %>% map_chr("name"),
+    label_url = usethis_labs %>% map_chr("url")
+    )
+
+labs_df
+```
+
+
+[^1]: A total rip-off of Jenny Bryan's ["Analyze GitHub stuff with R"](https://github.com/jennybc/analyze-github-stuff-with-r)
